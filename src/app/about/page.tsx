@@ -20,6 +20,12 @@ const projects = [
       "A fitness and calorie tracking app with meal planning, workouts, and progress tracking.",
     href: "https://caloficit.cardinalstudio.dev",
   },
+  {
+    name: "Portfolio",
+    description:
+      "A showcase of my work, projects, and skills.",
+    href: "https://portfolio-diogodiascardinal.vercel.app",
+  },
 ];
 
 const links = [
@@ -31,35 +37,38 @@ const links = [
 export default function About() {
   return (
     <div className="flex flex-col min-h-screen">
-      <header className="pt-16 pb-8 px-6">
-        <div className="max-w-lg mx-auto">
+      <header className="pt-20 pb-10 px-6">
+        <div className="max-w-xl mx-auto">
           <Link
             href="/"
-            className="text-sm text-gray-400 hover:text-gray-600 transition-colors"
+            className="animate-fade-in-up stagger-1 inline-flex items-center gap-1.5 text-sm text-gray-400 link-underline transition-colors hover:text-gray-600"
           >
-            &larr; Home
+            ← Home
           </Link>
-          <h1 className="mt-4 text-2xl font-bold tracking-tight">About</h1>
+          <h1 className="animate-fade-in-up stagger-2 mt-6 text-3xl font-bold tracking-tight">
+            About
+          </h1>
+          <div className="animate-fade-in stagger-3 mt-4 w-12 h-px bg-gray-300" />
         </div>
       </header>
 
-      <main className="flex-1 px-6 max-w-lg mx-auto w-full">
-        <section>
-          <p className="text-gray-600 leading-relaxed">
+      <main className="flex-1 px-6 max-w-xl mx-auto w-full">
+        <section className="animate-fade-in-up stagger-3">
+          <p className="text-gray-500 leading-relaxed text-base">
             Diogo is a solo developer building web apps under the Cardinal
             Studio label. Focused on shipping useful, well-crafted products.
           </p>
         </section>
 
-        <section className="mt-10">
-          <h2 className="text-xs font-semibold uppercase tracking-widest text-gray-400">
+        <section className="animate-fade-in-up stagger-4 mt-12">
+          <h2 className="text-xs font-semibold uppercase tracking-[0.15em] text-gray-400">
             Focus
           </h2>
-          <div className="mt-3 flex flex-wrap gap-2">
+          <div className="mt-4 flex flex-wrap gap-2">
             {skills.map((skill) => (
               <span
                 key={skill}
-                className="rounded-full border border-gray-200 px-3 py-1 text-sm text-gray-600"
+                className="pill-tag rounded-full border border-gray-200 px-4 py-1.5 text-sm text-gray-500 cursor-default"
               >
                 {skill}
               </span>
@@ -67,21 +76,23 @@ export default function About() {
           </div>
         </section>
 
-        <section className="mt-10">
-          <h2 className="text-xs font-semibold uppercase tracking-widest text-gray-400">
+        <section className="animate-fade-in-up stagger-5 mt-12">
+          <h2 className="text-xs font-semibold uppercase tracking-[0.15em] text-gray-400">
             Projects
           </h2>
-          <div className="mt-3 space-y-4">
+          <div className="mt-4 space-y-4">
             {projects.map((project) => (
               <a
                 key={project.name}
                 href={project.href}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="block rounded-xl border border-gray-200 p-4 transition-all duration-200 hover:shadow-md hover:scale-[1.01]"
+                className="card-glow block rounded-2xl border border-gray-100 p-5"
               >
-                <h3 className="font-semibold">{project.name}</h3>
-                <p className="mt-1 text-sm text-gray-500">
+                <h3 className="font-semibold tracking-tight line-accent">
+                  {project.name}
+                </h3>
+                <p className="mt-2 text-sm text-gray-400 leading-relaxed">
                   {project.description}
                 </p>
               </a>
@@ -89,18 +100,18 @@ export default function About() {
           </div>
         </section>
 
-        <section className="mt-10">
-          <h2 className="text-xs font-semibold uppercase tracking-widest text-gray-400">
+        <section className="animate-fade-in-up stagger-6 mt-12">
+          <h2 className="text-xs font-semibold uppercase tracking-[0.15em] text-gray-400">
             Links
           </h2>
-          <div className="mt-3 flex gap-4">
+          <div className="mt-4 flex gap-6">
             {links.map((link) => (
               <a
                 key={link.label}
                 href={link.href}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-sm text-gray-500 hover:text-gray-800 transition-colors"
+                className="text-sm text-gray-400 link-underline transition-colors hover:text-gray-800"
               >
                 {link.label}
               </a>
@@ -109,8 +120,8 @@ export default function About() {
         </section>
       </main>
 
-      <footer className="py-8 px-6 text-center text-xs text-gray-400">
-        Made by Diogo &middot; Cardinal Studio &middot; 2025
+      <footer className="animate-fade-in stagger-6 py-12 px-6 text-center text-xs text-gray-300 tracking-wide">
+        Built by Diogo · Cardinal Studio · {new Date().getFullYear()}
       </footer>
     </div>
   );

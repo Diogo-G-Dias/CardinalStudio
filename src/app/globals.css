@@ -1,8 +1,140 @@
 @import "tailwindcss";
 
+:root {
+  --bg: #fafafa;
+  --text: #111111;
+  --muted: #6b7280;
+  --border: #e5e7eb;
+  --card-hover: rgba(0, 0, 0, 0.02);
+}
+
 body {
-  background: #ffffff;
-  color: #111111;
+  background: var(--bg);
+  color: var(--text);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+/* Staggered fade-in-up animation */
+@keyframes fade-in-up {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fade-in {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes subtle-float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-4px); }
+}
+
+.animate-fade-in-up {
+  animation: fade-in-up 0.6s ease-out both;
+}
+
+.animate-fade-in {
+  animation: fade-in 0.8s ease-out both;
+}
+
+.stagger-1 { animation-delay: 0.1s; }
+.stagger-2 { animation-delay: 0.2s; }
+.stagger-3 { animation-delay: 0.3s; }
+.stagger-4 { animation-delay: 0.4s; }
+.stagger-5 { animation-delay: 0.5s; }
+.stagger-6 { animation-delay: 0.6s; }
+
+/* Card glow on hover */
+.card-glow {
+  position: relative;
+  background: white;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.card-glow::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  padding: 1px;
+  background: linear-gradient(135deg, transparent, rgba(0,0,0,0.06), transparent);
+  mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  mask-composite: exclude;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.card-glow:hover::before {
+  opacity: 1;
+}
+
+.card-glow:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 40px -12px rgba(0, 0, 0, 0.1),
+              0 4px 16px -4px rgba(0, 0, 0, 0.06);
+}
+
+.card-glow:active {
+  transform: translateY(-2px) scale(0.99);
+}
+
+/* Subtle line decoration */
+.line-accent {
+  position: relative;
+}
+
+.line-accent::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 24px;
+  height: 2px;
+  background: #111;
+  border-radius: 1px;
+  transition: width 0.3s ease;
+}
+
+.line-accent:hover::after {
+  width: 48px;
+}
+
+/* Smooth link underline */
+.link-underline {
+  position: relative;
+  display: inline-block;
+}
+
+.link-underline::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background: currentColor;
+  transition: width 0.3s ease;
+}
+
+.link-underline:hover::after {
+  width: 100%;
+}
+
+/* Pill tag hover */
+.pill-tag {
+  transition: all 0.3s ease;
+}
+
+.pill-tag:hover {
+  background: #111;
+  color: white;
+  border-color: #111;
 }
