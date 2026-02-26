@@ -27,24 +27,23 @@ export default function Home() {
     <div className="flex flex-col min-h-screen">
       {/* Hero */}
       <header className="pt-24 pb-16 px-6 text-center">
-        <Image
-          src="/cardinal-logo.png"
-          alt="Cardinal Studio"
-          width={80}
-          height={80}
-          className="animate-fade-in-up stagger-1 mx-auto"
-          priority
-        />
-        <p className="animate-fade-in-up stagger-2 mt-5 text-xs font-medium uppercase tracking-[0.2em] text-gray-400">
-          Independent Studio
-        </p>
-        <h1 className="animate-fade-in-up stagger-3 mt-4 text-4xl sm:text-5xl font-bold tracking-tight">
+        <div className="animate-fade-in-up stagger-1 mx-auto w-fit logo-float">
+          <Image
+            src="/cardinal-logo.png"
+            alt="Cardinal Studio"
+            width={140}
+            height={140}
+            className="drop-shadow-[0_8px_24px_rgba(0,0,0,0.12)]"
+            priority
+          />
+        </div>
+        <h1 className="animate-fade-in-up stagger-2 mt-6 text-4xl sm:text-5xl font-bold tracking-tight">
           Cardinal Studio
         </h1>
-        <p className="animate-fade-in-up stagger-4 mt-3 text-base text-gray-400 max-w-sm mx-auto">
+        <p className="animate-fade-in-up stagger-3 mt-3 text-base text-gray-400 max-w-sm mx-auto">
           A small studio building useful things for the web.
         </p>
-        <div className="animate-fade-in stagger-5 mt-6 w-12 h-px bg-gray-300 mx-auto" />
+        <div className="animate-fade-in stagger-4 mt-6 w-12 h-px bg-gray-300 mx-auto" />
       </header>
 
       {/* App Cards */}
