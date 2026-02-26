@@ -26,6 +26,12 @@ const projects = [
       "A showcase of my work, projects, and skills.",
     href: "https://portfolio.cardinalstudio.dev",
   },
+  {
+    name: "ApplyHelp",
+    description:
+      "A Chrome extension that auto-fills job application forms with your profile data.",
+    href: "https://applyhelp.cardinalstudio.dev",
+  },
 ];
 
 const links = [

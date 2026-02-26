@@ -20,6 +20,12 @@ const apps = [
     tagline: "My work & projects",
     href: "https://portfolio.cardinalstudio.dev",
   },
+  {
+    name: "ApplyHelp",
+    emoji: "📝",
+    tagline: "Auto-fill job applications",
+    href: "https://applyhelp.cardinalstudio.dev",
+  },
 ];
 
 export default function Home() {
@@ -47,8 +53,8 @@ export default function Home() {
       </header>
 
       {/* App Cards */}
-      <main className="flex-1 px-6 max-w-2xl mx-auto w-full">
-        <div className="grid grid-cols-1 sm:grid-cols-3 gap-5">
+      <main className="flex-1 px-6 max-w-3xl mx-auto w-full">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
           {apps.map((app, i) => (
             <a
               key={app.name}
