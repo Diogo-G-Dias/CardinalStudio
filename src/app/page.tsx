@@ -18,7 +18,7 @@ const apps = [
     name: "Portfolio",
     emoji: "💼",
     tagline: "My work & projects",
-    href: "https://portfolio-diogodiascardinal.vercel.app",
+    href: "https://portfolio.cardinalstudio.dev",
   },
 ];
 

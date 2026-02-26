@@ -24,7 +24,7 @@ const projects = [
     name: "Portfolio",
     description:
       "A showcase of my work, projects, and skills.",
-    href: "https://portfolio-diogodiascardinal.vercel.app",
+    href: "https://portfolio.cardinalstudio.dev",
   },
 ];
 
