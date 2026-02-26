@@ -13,6 +13,12 @@ const apps = [
     tagline: "Your slim journey",
     href: "https://caloficit.cardinalstudio.dev",
   },
+  {
+    name: "Portfolio",
+    emoji: "\uD83D\uDCBC",
+    tagline: "My work & projects",
+    href: "https://portfolio-diogodiascardinal.vercel.app",
+  },
 ];
 
 export default function Home() {
