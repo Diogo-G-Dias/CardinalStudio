@@ -1,0 +1,289 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Contact — Cardinal Studio</title>
+    <meta name="description" content="Talk to Cardinal Studio. Simple form, or live chat with the chatbot that sees our calendar and books a call directly." />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:wght@400;600;800&family=Inter:wght@400;500;600&display=swap" />
+    <link rel="stylesheet" href="/styles.css" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+
+    <meta name="theme-color" content="#0D1117" />
+    <meta property="og:title" content="Contact — Cardinal Studio" />
+    <meta property="og:description" content="Talk to Cardinal Studio. Simple form, or live chat with the chatbot that sees our calendar and books a call directly." />
+    <meta property="og:locale" content="en" />
+    <meta property="og:type" content="website" />
+
+    <style>
+      :root {
+        --primary: #E2384B;
+        --secondary: #14213D;
+        --accent: #88D4D9;
+        --bg: #0D1117;
+        --text: #F7F4F0;
+        --text-inverse: #0D1117;
+        --surface: #14213D;
+        --surface-muted: #1A2540;
+        --border: #243355;
+        --font-heading: Fraunces, serif;
+        --font-body: Inter, sans-serif;
+      }
+    </style>
+  </head>
+
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <header class="site-nav" role="banner">
+      <div class="container nav-row">
+        <a class="nav-logo" href="/en/" aria-label="Cardinal Studio">
+          <img src="/assets/brand/logo.png" alt="Cardinal Studio" class="brand-logo" width="48" height="48" />
+          <span class="brand-name">Cardinal Studio</span>
+        </a>
+
+        <nav aria-label="Principal" class="nav-links">
+            <a
+              href="/en/"
+              class="nav-link"
+              
+            >Home</a>
+            <a
+              href="/en/sobre.html"
+              class="nav-link"
+              
+            >About</a>
+            <a
+              href="/en/servicos.html"
+              class="nav-link"
+              
+            >Services</a>
+            <a
+              href="/en/portfolio.html"
+              class="nav-link"
+              
+            >Portfolio</a>
+            <a
+              href="/en/contacto.html"
+              class="nav-link is-current"
+              aria-current="page"
+            >Contact</a>
+        </nav>
+
+        <div class="nav-actions">
+            <div class="lang-switcher" role="group" aria-label="Language">
+                <a
+                  href="/contacto.html"
+                  hreflang="pt-PT"
+                  class="lang-link"
+                >PT</a>
+                <a
+                  href="/en/contacto.html"
+                  hreflang="en"
+                  class="lang-link is-current"
+                >EN</a>
+            </div>
+
+            <a class="btn btn-primary nav-cta" href="/en/contacto.html">
+              Book a call
+            </a>
+        </div>
+      </div>
+    </header>
+
+    <main id="main" class="site-main">
+
+      <section
+  class="section section-contact"
+  id="contact"
+  data-section-type="contact-form"
+>
+  <div class="container">
+    <h2>Let&#x27;s talk.</h2>
+      <p class="lead">Pick a channel: this form, the assistant chat (featured on the home page), WhatsApp, or direct email. Everything reaches the same person — me. No filtering, no automated &#x27;we got your message&#x27; replies.</p>
+
+    <div class="contact-grid">
+      <form
+        class="contact-form"
+        method="post"
+        action=""
+        novalidate
+      >
+        <div class="form-field">
+          <label for="contact-name">Name</label>
+          <input
+            id="contact-name"
+            name="name"
+            type="text"
+            required
+            autocomplete="name"
+          />
+        </div>
+
+        <div class="form-field">
+          <label for="contact-email">Email</label>
+          <input
+            id="contact-email"
+            name="email"
+            type="email"
+            required
+            autocomplete="email"
+          />
+        </div>
+
+        <div class="form-field">
+          <label for="contact-message">Message</label>
+          <textarea
+            id="contact-message"
+            name="message"
+            required
+            placeholder="Briefly, what&#x27;s eating your day right now?"
+          ></textarea>
+        </div>
+
+        <button type="submit" class="btn btn-primary">
+          Send message
+        </button>
+
+        <p class="form-status form-status-success" hidden>
+          Got it. I&#x27;ll reply within 24 working hours.
+        </p>
+        <p class="form-status form-status-error" hidden>
+          Something went wrong on our end. Send a WhatsApp and we&#x27;ll sort it in 5 minutes.
+        </p>
+      </form>
+
+        <aside class="contact-fallbacks">
+            <p class="eyebrow">Or directly</p>
+          <ul class="fallback-list" role="list">
+              <li>
+                <span class="fallback-label">Email</span>
+                  <a href="mailto:diogo@cardinalstudio.dev">diogo@cardinalstudio.dev</a>
+              </li>
+          </ul>
+        </aside>
+    </div>
+  </div>
+</section>
+
+
+<section
+  class="section chatbot-demo"
+  id="chat"
+  data-section-type="chatbot-demo"
+>
+  <div class="container">
+    <h2>Talk to the assistant</h2>
+    <p class="lead">Use the chat to book directly, no waiting on email replies. You&#x27;re talking to AI. If you&#x27;d rather a real person, that&#x27;s one WhatsApp away.</p>
+
+    <div class="chatbot">
+      <ul class="chatbot-prompts">
+          <li>
+            <button
+              type="button"
+              class="chatbot-prompt"
+              data-chatbot-prompt="Any availability this week?"
+            >Any availability this week?</button>
+          </li>
+          <li>
+            <button
+              type="button"
+              class="chatbot-prompt"
+              data-chatbot-prompt="How do we start?"
+            >How do we start?</button>
+          </li>
+          <li>
+            <button
+              type="button"
+              class="chatbot-prompt"
+              data-chatbot-prompt="Price range for my case?"
+            >Price range for my case?</button>
+          </li>
+      </ul>
+
+      <div
+        class="chatbot-widget chatbot-widget-stub"
+        data-chatbot-mount="chat"
+        aria-live="polite"
+      >
+        <p class="chatbot-stub-line">
+          <span class="chatbot-stub-bullet" aria-hidden="true">●</span>
+          O assistente vai estar aqui mal a integração Cal.com esteja ligada. Carrega numa das perguntas acima para ver o tipo de conversa.
+        </p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+    </main>
+
+    <footer class="site-footer" role="contentinfo">
+      <div class="container footer-grid">
+        <div class="footer-brand">
+          <p class="footer-logo">
+            <img src="/assets/brand/logo.png" alt="Cardinal Studio" class="brand-logo brand-logo-footer" width="40" height="40" />
+            Cardinal Studio
+          </p>
+            <p class="footer-tagline">Sites and automation for small businesses in Portugal.</p>
+        </div>
+
+        <nav class="footer-nav" aria-label="Footer">
+            <a href="/en/" class="footer-link">Home</a>
+            <a href="/en/sobre.html" class="footer-link">About</a>
+            <a href="/en/servicos.html" class="footer-link">Services</a>
+            <a href="/en/portfolio.html" class="footer-link">Portfolio</a>
+            <a href="/en/contacto.html" class="footer-link">Contact</a>
+        </nav>
+
+        <div class="footer-legal">
+            <p class="footer-legal-line">© 2026 Cardinal Studio — Diogo (sole proprietor), Portugal</p>
+            <p class="footer-legal-line">Privacy Policy</p>
+            <p class="footer-legal-line">Terms of Use</p>
+            <p class="footer-legal-line">AI interaction notice</p>
+            <p class="footer-legal-line">Electronic Complaints Book</p>
+        </div>
+
+        <div class="footer-meta">
+          <p class="footer-id">Cardinal Studio · Diogo (sole proprietor), Alentejo, Portugal · diogo@cardinalstudio.dev</p>
+        </div>
+      </div>
+    </footer>
+
+      <dialog class="cookie-banner" aria-labelledby="cookie-text" id="cookie-banner">
+        <div class="container cookie-row">
+          <p id="cookie-text" class="cookie-text">We use essential cookies for the form and the assistant to work. No ad tracking, no third parties. Details in the Privacy Policy.</p>
+          <div class="cookie-actions">
+            <button type="button" class="btn btn-ghost" data-cookie-action="reject">
+              Essentials only
+            </button>
+            <button type="button" class="btn btn-primary" data-cookie-action="accept">
+              Accept
+            </button>
+          </div>
+        </div>
+      </dialog>
+
+      <script>
+        (() => {
+          const dlg = document.getElementById('cookie-banner');
+          if (!dlg) return;
+          if (document.cookie.includes('cs-consent=')) return;
+          if (typeof dlg.showModal === 'function') dlg.showModal();
+          else dlg.setAttribute('open', '');
+          dlg.addEventListener('click', (e) => {
+            const action = e.target?.dataset?.cookieAction;
+            if (!action) return;
+            const value = action === 'accept' ? 'all' : 'essential';
+            const oneYear = 60 * 60 * 24 * 365;
+            document.cookie = `cs-consent=${value};max-age=${oneYear};path=/;SameSite=Lax`;
+            dlg.close?.();
+            dlg.removeAttribute('open');
+          });
+        })();
+      </script>
+  </body>
+</html>
