@@ -3,33 +3,32 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Portfolio — Cardinal Studio</title>
-    <meta name="description" content="Cardinal Studio cases. We&#x27;re closing first clients — meanwhile the best case is this site, which does exactly what we sell." />
+    <title>Work — Cardinal Studio</title>
+    <meta name="description" content="Selected work from Cardinal Studio. Brand websites for projects with passionate fanbases. Curated, not exhaustive." />
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:wght@400;600;800&family=Inter:wght@400;500;600&display=swap" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,700;12..96,800&family=Inter:wght@400;500;600&display=swap" />
     <link rel="stylesheet" href="/styles.css" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 
     <meta name="theme-color" content="#0D1117" />
-    <meta property="og:title" content="Portfolio — Cardinal Studio" />
-    <meta property="og:description" content="Cardinal Studio cases. We&#x27;re closing first clients — meanwhile the best case is this site, which does exactly what we sell." />
+    <meta property="og:title" content="Work — Cardinal Studio" />
+    <meta property="og:description" content="Selected work from Cardinal Studio. Brand websites for projects with passionate fanbases. Curated, not exhaustive." />
     <meta property="og:locale" content="en" />
     <meta property="og:type" content="website" />
 
     <style>
       :root {
-        --primary: #E2384B;
-        --secondary: #14213D;
-        --accent: #88D4D9;
-        --bg: #0D1117;
-        --text: #F7F4F0;
-        --text-inverse: #0D1117;
-        --surface: #14213D;
-        --surface-muted: #1A2540;
-        --border: #243355;
-        --font-heading: Fraunces, serif;
+        --primary: #D62828;
+        --secondary: #1F3A93;
+        --accent: #F4B41A;
+        --bg: #F4EBD0;
+        --text: #14171F;
+        --text-inverse: #F4EBD0;
+        --muted: #5A5147;
+        --border: #D6CDB3;
+        --font-heading: Bricolage Grotesque, sans-serif;
         --font-body: Inter, sans-serif;
       }
     </style>
@@ -52,22 +51,12 @@
               
             >Home</a>
             <a
-              href="/sobre.html"
-              class="nav-link"
-              
-            >About</a>
-            <a
-              href="/servicos.html"
-              class="nav-link"
-              
-            >Services</a>
-            <a
-              href="/portfolio.html"
+              href="/work.html"
               class="nav-link is-current"
               aria-current="page"
-            >Portfolio</a>
+            >Work</a>
             <a
-              href="/contacto.html"
+              href="/contact.html"
               class="nav-link"
               
             >Contact</a>
@@ -76,19 +65,19 @@
         <div class="nav-actions">
             <div class="lang-switcher" role="group" aria-label="Language">
                 <a
-                  href="/pt-PT/portfolio.html"
-                  hreflang="pt-PT"
-                  class="lang-link"
-                >PT</a>
-                <a
-                  href="/portfolio.html"
+                  href="/work.html"
                   hreflang="en"
                   class="lang-link is-current"
                 >EN</a>
+                <a
+                  href="/pt-PT/work.html"
+                  hreflang="pt-PT"
+                  class="lang-link"
+                >PT</a>
             </div>
 
-            <a class="btn btn-primary nav-cta" href="/contacto.html">
-              Book a call
+            <a class="btn btn-primary nav-cta" href="/contact.html">
+              Talk to me
             </a>
         </div>
       </div>
@@ -97,13 +86,34 @@
     <main id="main" class="site-main">
 
       <section
+  class="section hero"
+  id="hero"
+  data-section-type="hero-typographic"
+>
+  <span class="hero-mark-watermark" aria-hidden="true">#</span>
+
+  <div class="container">
+
+    <h1 class="hero-headline">Selected work.</h1>
+    <p class="hero-sub">Curated, not exhaustive. The brands here are the ones I&#x27;d proudly show a Jagex producer.</p>
+
+    <div class="cta-row">
+      <a class="btn btn-primary" href="/contact.html">
+        Get in touch
+      </a>
+    </div>
+  </div>
+</section>
+
+
+<section
   class="section portfolio"
   id="cases"
   data-section-type="portfolio-grid"
 >
   <div class="container">
-    <h2>Cases</h2>
-      <p class="lead">First public case closed. More in progress. The assistant on this page is the clearest demo of what I deliver — ask it about what&#x27;s coming next.</p>
+    <h2>The cases</h2>
+      <p class="lead">One real case so far. More incoming as I publish them.</p>
 
       <div class="portfolio-grid">
           <a
@@ -119,26 +129,9 @@
                 />
             </figure>
             <h3>CPS Plastering &amp; Rendering</h3>
-            <p class="case-summary">Reimagined website for a Coventry plastering and rendering business. Drag-to-compare case studies, quote form, and Google/Trustpilot social proof embedded.</p>
+            <p class="case-summary">Reimagined website for a Coventry plastering and rendering business. Drag-to-compare case studies, quote form, Google/Trustpilot social proof embedded.</p>
           </a>
       </div>
-  </div>
-</section>
-
-
-<section
-  class="section cta-banner"
-  id="closing"
-  data-section-type="cta-banner"
->
-  <div class="container">
-    <h2>Ask me what I&#x27;d build for your business.</h2>
-
-    <div class="cta-row">
-      <a class="btn btn-primary" href="/contacto.html">
-        Book a call
-      </a>
-    </div>
   </div>
 </section>
 
@@ -151,40 +144,33 @@
             <img src="/assets/brand/logo.png" alt="Cardinal Studio" class="brand-logo brand-logo-footer" width="40" height="40" />
             Cardinal Studio
           </p>
-            <p class="footer-tagline">Sites and automation for small businesses in Portugal.</p>
         </div>
 
         <nav class="footer-nav" aria-label="Footer">
             <a href="/" class="footer-link">Home</a>
-            <a href="/sobre.html" class="footer-link">About</a>
-            <a href="/servicos.html" class="footer-link">Services</a>
-            <a href="/portfolio.html" class="footer-link">Portfolio</a>
-            <a href="/contacto.html" class="footer-link">Contact</a>
+            <a href="/work.html" class="footer-link">Work</a>
+            <a href="/contact.html" class="footer-link">Contact</a>
         </nav>
 
         <div class="footer-legal">
-            <p class="footer-legal-line">© 2026 Cardinal Studio — Diogo (sole proprietor), Portugal</p>
-            <p class="footer-legal-line">Privacy Policy</p>
-            <p class="footer-legal-line">Terms of Use</p>
-            <p class="footer-legal-line">AI interaction notice</p>
-            <p class="footer-legal-line">Electronic Complaints Book</p>
+            <p class="footer-legal-line">© 2026 Cardinal Studio. Diogo (ENI), Alentejo, Portugal.</p>
         </div>
 
         <div class="footer-meta">
-          <p class="footer-id">Cardinal Studio · Diogo (sole proprietor), Alentejo, Portugal · diogo@cardinalstudio.dev</p>
+          <p class="footer-id">Cardinal Studio — Diogo (ENI), Alentejo, Portugal</p>
         </div>
       </div>
     </footer>
 
       <dialog class="cookie-banner" aria-labelledby="cookie-text" id="cookie-banner">
         <div class="container cookie-row">
-          <p id="cookie-text" class="cookie-text">We use essential cookies for the form and the assistant to work. No ad tracking, no third parties. Details in the Privacy Policy.</p>
+          <p id="cookie-text" class="cookie-text">Essential cookies only. No tracking, no funnels.</p>
           <div class="cookie-actions">
             <button type="button" class="btn btn-ghost" data-cookie-action="reject">
               Essentials only
             </button>
             <button type="button" class="btn btn-primary" data-cookie-action="accept">
-              Accept
+              OK
             </button>
           </div>
         </div>
