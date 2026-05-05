@@ -1,10 +1,10 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Cardinal Studio">
-  <rect width="64" height="64" rx="12" fill="#0D1117"/>
+  <rect width="64" height="64" rx="12" fill="#14171F"/>
   <text x="32" y="46"
         text-anchor="middle"
-        font-family="Fraunces, ui-serif, Georgia, serif"
+        font-family="Bricolage Grotesque, ui-sans-serif, system-ui, sans-serif"
         font-size="48"
         font-weight="800"
-        fill="#E2384B"
+        fill="#D62828"
         letter-spacing="-2">#</text>
 </svg>

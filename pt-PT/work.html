@@ -12,11 +12,17 @@
     <link rel="stylesheet" href="/styles.css" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 
-    <meta name="theme-color" content="#0D1117" />
+    <meta name="theme-color" content="#14171F" />
     <meta property="og:title" content="Trabalho — Cardinal Studio" />
     <meta property="og:description" content="Trabalho seleccionado da Cardinal Studio. Sites de marca para projetos com fanbase apaixonada. Curado, não exaustivo." />
     <meta property="og:locale" content="pt-PT" />
     <meta property="og:type" content="website" />
+    <meta property="og:image" content="/og-image.svg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:type" content="image/svg+xml" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:image" content="/og-image.svg" />
 
     <style>
       :root {
@@ -40,7 +46,9 @@
     <header class="site-nav" role="banner">
       <div class="container nav-row">
         <a class="nav-logo" href="/pt-PT/" aria-label="Cardinal Studio">
-          <img src="/assets/brand/logo.png" alt="Cardinal Studio" class="brand-logo" width="48" height="48" />
+          <svg class="brand-mark" viewBox="0 0 32 32" aria-hidden="true" focusable="false">
+            <text x="16" y="24" text-anchor="middle" font-family="Bricolage Grotesque, sans-serif" font-size="28" font-weight="800" fill="var(--primary)" letter-spacing="-1">#</text>
+          </svg>
           <span class="brand-name">Cardinal Studio</span>
         </a>
 
@@ -141,7 +149,9 @@
       <div class="container footer-grid">
         <div class="footer-brand">
           <p class="footer-logo">
-            <img src="/assets/brand/logo.png" alt="Cardinal Studio" class="brand-logo brand-logo-footer" width="40" height="40" />
+            <svg class="brand-mark brand-mark-footer" viewBox="0 0 32 32" aria-hidden="true" focusable="false">
+              <text x="16" y="24" text-anchor="middle" font-family="Bricolage Grotesque, sans-serif" font-size="28" font-weight="800" fill="var(--primary)" letter-spacing="-1">#</text>
+            </svg>
             Cardinal Studio
           </p>
         </div>
