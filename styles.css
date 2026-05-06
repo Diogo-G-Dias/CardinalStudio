@@ -59,8 +59,14 @@ body {
 /* ─── Bone Dark theme override ──────────────────────────────
    Inverts the Bone Light palette while staying in the same brand family —
    wine burgundy stays as primary spine (lifted for dark contrast); bone
-   becomes the text color; near-black warm becomes the bg. */
-[data-theme="dark"] {
+   becomes the text color; near-black warm becomes the bg.
+
+   Specificity note: must use `:root[data-theme="dark"]` (not just the
+   attribute) to beat the inline `<style>` block in <head> which sets the
+   default Bone Light vars on plain `:root`. Same specificity + later =
+   inline wins; bumping to `:root[...]` (0,2,0) beats `:root` (0,1,0)
+   regardless of source order. */
+:root[data-theme="dark"] {
   --primary: #C73648;
   --secondary: #221A14;
   --accent: #8FB85E;
@@ -85,8 +91,7 @@ body::before {
   transition: opacity 200ms ease;
 }
 
-[data-theme="dark"] body::before,
-body[data-theme="dark"]::before {
+:root[data-theme="dark"] body::before {
   opacity: 0.05;
   mix-blend-mode: screen;
 }
