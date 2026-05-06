@@ -26,17 +26,21 @@
 
     <style>
       :root {
-        --primary: #F4A03F; --secondary: #1B1812; --accent: #6BD6FF;
-        --bg: #0E0D0A; --text: #F5EFE0; --text-inverse: #0E0D0A;
-        --muted: #7A7568; --border: #2A2419;
+        --primary: #2D8B4A; --secondary: #E8DDB8; --accent: #C8941A;
+        --bg: #F5EFE0; --text: #14201A; --text-inverse: #F5EFE0;
+        --muted: #5F6E66; --border: #D8C9A8;
         --font-heading: Archivo, sans-serif; --font-body: Space Grotesk, sans-serif;
         --font-mono: JetBrains Mono, ui-monospace, SF Mono, Menlo, Consolas, monospace;
       }
     </style>
   
+    <style>
+      body::before { mix-blend-mode: multiply !important; opacity: 0.04 !important; }
+      body::after { opacity: 0.012 !important; }
+    </style>
   </head>
 
-  <body data-theme="amber">
+  <body data-theme="saradomin-light">
     <a class="skip-link" href="#main">Skip to content</a>
 
     <div class="scroll-progress" aria-hidden="true"></div>
@@ -494,6 +498,6 @@
       })();
     </script>
 
-    <div style="position:fixed;bottom:20px;left:20px;z-index:9999;background:#1B1812;color:#F5EFE0;padding:8px 14px;font-family:'Archivo',sans-serif;font-weight:700;font-size:11px;letter-spacing:0.08em;text-transform:uppercase;border-radius:4px;border:1.5px solid #F4A03F;box-shadow:0 4px 16px rgba(0,0,0,0.18);max-width:calc(100vw - 40px)">Amber Console · <a href="/" style="color:#6BD6FF;text-decoration:underline">FireRed (default)</a> · <a href="/saradomin.html" style="color:#6BD6FF;text-decoration:underline">Saradomin</a> · <a href="/cobalt.html" style="color:#6BD6FF;text-decoration:underline">Cobalt</a> · <a href="/saradomin-light.html" style="color:#6BD6FF;text-decoration:underline">Saradomin · Light</a> · <a href="/cobalt-light.html" style="color:#6BD6FF;text-decoration:underline">Cobalt · Light</a> · <a href="/bone.html" style="color:#6BD6FF;text-decoration:underline">Bone Editorial</a></div>
+    <div style="position:fixed;bottom:20px;left:20px;z-index:9999;background:#E8DDB8;color:#14201A;padding:8px 14px;font-family:'Archivo',sans-serif;font-weight:700;font-size:11px;letter-spacing:0.08em;text-transform:uppercase;border-radius:4px;border:1.5px solid #2D8B4A;box-shadow:0 4px 16px rgba(0,0,0,0.18);max-width:calc(100vw - 40px)">Saradomin · Light · <a href="/" style="color:#C8941A;text-decoration:underline">FireRed (default)</a> · <a href="/saradomin.html" style="color:#C8941A;text-decoration:underline">Saradomin</a> · <a href="/cobalt.html" style="color:#C8941A;text-decoration:underline">Cobalt</a> · <a href="/amber.html" style="color:#C8941A;text-decoration:underline">Amber Console</a> · <a href="/cobalt-light.html" style="color:#C8941A;text-decoration:underline">Cobalt · Light</a> · <a href="/bone.html" style="color:#C8941A;text-decoration:underline">Bone Editorial</a></div>
   </body>
 </html>
