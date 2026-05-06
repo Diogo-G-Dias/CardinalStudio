@@ -26,19 +26,28 @@
 
     <style>
       :root {
-        --primary: #FF4655;
-        --secondary: #1A1A1F;
-        --accent: #FF4655;
-        --bg: #0F0F12;
-        --text: #FAFAFA;
-        --text-inverse: #FAFAFA;
-        --muted: #6B6B73;
-        --border: #1F1F25;
+        --primary: #8B2436;
+        --secondary: #FFFFFF;
+        --accent: #5C7C3E;
+        --bg: #F4F0E8;
+        --text: #1A1410;
+        --text-inverse: #F4F0E8;
+        --muted: #6E6356;
+        --border: #DEDAD0;
         --font-heading: Archivo, sans-serif;
         --font-body: Space Grotesk, sans-serif;
         --font-mono: JetBrains Mono, ui-monospace, SF Mono, Menlo, Consolas, monospace;
       }
     </style>
+
+    <script>
+      /* Run before paint to avoid theme flash. */
+      (function () {
+        var stored = localStorage.getItem('cs-theme');
+        var systemDark = matchMedia('(prefers-color-scheme: dark)').matches;
+        document.documentElement.setAttribute('data-theme', stored || (systemDark ? 'dark' : 'light'));
+      })();
+    </script>
   </head>
 
   <body>
@@ -70,21 +79,6 @@
               class="nav-link"
               
             >Work</a>
-            <a
-              href="/writing.html"
-              class="nav-link"
-              
-            >Writing</a>
-            <a
-              href="/now.html"
-              class="nav-link"
-              
-            >Now</a>
-            <a
-              href="/contact.html"
-              class="nav-link"
-              
-            >Contact</a>
         </nav>
 
         <div class="nav-actions">
@@ -101,9 +95,15 @@
                 >PT</a>
             </div>
 
-            <a class="btn btn-primary nav-cta" href="/contact.html">
-              Talk to me
-            </a>
+          <button
+            type="button"
+            class="theme-toggle"
+            data-theme-toggle
+            aria-label="Toggle light and dark theme"
+          >
+            <span class="theme-toggle-label" aria-hidden="true">Dark</span>
+          </button>
+
         </div>
       </div>
     </header>
@@ -111,66 +111,30 @@
     <main id="main" class="site-main">
 
       <section
-  class="section hero"
+  class="section hero room room-statement"
   id="hero"
   data-section-type="hero-typographic"
 >
-  <div class="container hero-grid">
-    <div class="hero-text">
-        <p class="eyebrow reveal" data-reveal>&gt; diogo --solo --multi-class --player</p>
+  <div class="container">
+      <p class="eyebrow reveal" data-reveal>&gt; diogo --solo --multi-class --player</p>
 
-      <h1 class="hero-headline reveal" data-reveal data-reveal-delay="80">Not an agency. A player.</h1>
-      <p class="hero-sub reveal" data-reveal data-reveal-delay="160">I&#x27;m Diogo. I rebuild websites for brands worth being a fan of. Solo, multi-class, lifelong player.</p>
+    <h1 class="hero-headline reveal" data-reveal data-reveal-delay="80">Not an agency. A player.</h1>
+      <p class="hero-sub reveal" data-reveal data-reveal-delay="160">I design, code, ship and maintain brand sites — solo, no handoffs. Brands worth being a fan of, end-to-end in one head.</p>
 
-      <div class="cta-row reveal" data-reveal data-reveal-delay="240">
-        <a class="btn btn-primary" href="/work.html">
-          See the work
+    <div class="cta-row reveal" data-reveal data-reveal-delay="240">
+      <a class="btn btn-primary" href="/work.html">
+        See the work
+      </a>
+        <a class="btn btn-ghost" href="/#closing">
+          Talk
         </a>
-          <a class="btn btn-ghost" href="/contact.html">
-            Get in touch
-          </a>
-      </div>
     </div>
-
-    <aside class="hero-loadout reveal" data-reveal data-reveal-delay="320" aria-label="Player loadout">
-      <p class="loadout-title">// player · loadout</p>
-      <dl class="loadout-grid">
-        <div class="loadout-row">
-          <dt>Player</dt>
-          <dd>Diogo</dd>
-        </div>
-        <div class="loadout-row">
-          <dt>Class</dt>
-          <dd>Solo · multi-class</dd>
-        </div>
-        <div class="loadout-row">
-          <dt>Stack</dt>
-          <dd>Web · Design · Game · Product</dd>
-        </div>
-        <div class="loadout-row">
-          <dt>Signal</dt>
-          <dd>Brand fluency over agency polish</dd>
-        </div>
-        <div class="loadout-row">
-          <dt>Playing</dt>
-          <dd>OSRS &middot; FireRed always</dd>
-        </div>
-        <div class="loadout-row">
-          <dt>Latest</dt>
-          <dd><a href="/work.html">CPS Plastering &rarr;</a></dd>
-        </div>
-        <div class="loadout-row">
-          <dt>Status</dt>
-          <dd><span class="loadout-pulse" aria-hidden="true"></span> Open for new builds</dd>
-        </div>
-      </dl>
-    </aside>
   </div>
 </section>
 
 
 <section
-  class="section about-narrative"
+  class="section about-narrative room room-manifesto"
   id="about"
   data-section-type="about-narrative"
 >
@@ -208,33 +172,7 @@
 
 
 <section
-  class="section process"
-  id="offer"
-  data-section-type="process"
->
-  <div class="container">
-    <h2>How a rebuild goes</h2>
-
-    <ol class="process-list" role="list">
-        <li class="process-step">
-          <h3>Brand intake</h3>
-          <p>I read everything you&#x27;ve made. Voice, audience, what&#x27;s load-bearing — captured in a profile we both sign off.</p>
-        </li>
-        <li class="process-step">
-          <h3>Site rebuild</h3>
-          <p>I rebuild the site from the brand profile up — typography, palette, copy, components. You see it grow.</p>
-        </li>
-        <li class="process-step">
-          <h3>Ship &amp; support</h3>
-          <p>It goes live on your domain. I stay on for the first month — small fixes, copy tweaks, anything you didn&#x27;t see coming.</p>
-        </li>
-    </ol>
-  </div>
-</section>
-
-
-<section
-  class="section portfolio"
+  class="section portfolio room room-work"
   id="signature"
   data-section-type="portfolio-grid"
 >
@@ -266,17 +204,45 @@
 
 
 <section
-  class="section cta-banner"
+  class="section value-prop room room-now"
+  id="now"
+  data-section-type="value-prop"
+  style="--cols: 3;"
+>
+  <div class="container">
+      <h2>Right now</h2>
+      <p class="lead">Updated this week. What I&#x27;m in the middle of, what I&#x27;m grinding, what I&#x27;m reading.</p>
+
+    <div class="value-grid">
+        <article class="value-card">
+          <h3>Building</h3>
+          <p>Cardinal Studio dogfood site itself — you&#x27;re on it. Iterating in public, palette of the week is mono dark with one FireRed accent. The brand-profile pipeline behind it is also getting a v4 pass.</p>
+        </article>
+        <article class="value-card">
+          <h3>Playing</h3>
+          <p>Old School RuneScape Leagues V — chasing a maxed Twisted Bow drop, mostly losing to RNG. Pokémon FireRed save file still alive on emulator, picked up between sessions.</p>
+        </article>
+        <article class="value-card">
+          <h3>Reading</h3>
+          <p>Refactoring UI by Adam Wathan &amp; Steve Schoger. The chapter on hierarchy still hits — most websites are flat because they don&#x27;t commit to a primary action.</p>
+        </article>
+    </div>
+  </div>
+</section>
+
+
+<section
+  class="section cta-banner room room-talk"
   id="closing"
   data-section-type="cta-banner"
 >
   <div class="container">
-    <h2 class="reveal" data-reveal>Got a brand worth rebuilding?</h2>
+    <h2 class="reveal" data-reveal>Talk to me.</h2>
       <p class="reveal" data-reveal data-reveal-delay="80">I read everything personally. No forms, no funnels.</p>
 
     <div class="cta-row reveal" data-reveal data-reveal-delay="160">
-      <a class="btn btn-primary" href="/contact.html">
-        Start a conversation
+      <a class="btn btn-primary" href="mailto:diogo@cardinalstudio.dev">
+        Send an email
       </a>
     </div>
   </div>
@@ -298,9 +264,6 @@
         <nav class="footer-nav" aria-label="Footer">
             <a href="/" class="footer-link">Home</a>
             <a href="/work.html" class="footer-link">Work</a>
-            <a href="/writing.html" class="footer-link">Writing</a>
-            <a href="/now.html" class="footer-link">Now</a>
-            <a href="/contact.html" class="footer-link">Contact</a>
         </nav>
 
         <div class="footer-legal">
@@ -345,6 +308,31 @@
           });
         })();
       </script>
+
+    <script>
+      // Theme toggle handler (init was already run in <head> to prevent flash).
+      // Updates label, theme-color meta, and persists choice.
+      (() => {
+        const root = document.documentElement;
+        const updateLabel = () => {
+          const isDark = root.getAttribute('data-theme') === 'dark';
+          document.querySelectorAll('[data-theme-toggle] .theme-toggle-label').forEach((el) => {
+            el.textContent = isDark ? 'Light' : 'Dark';
+          });
+          const meta = document.querySelector('meta[name="theme-color"]');
+          if (meta) meta.setAttribute('content', isDark ? '#1A1410' : '#F4F0E8');
+        };
+        updateLabel();
+        document.addEventListener('click', (e) => {
+          const btn = e.target.closest('[data-theme-toggle]');
+          if (!btn) return;
+          const next = root.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+          root.setAttribute('data-theme', next);
+          localStorage.setItem('cs-theme', next);
+          updateLabel();
+        });
+      })();
+    </script>
 
     <script>
       // Site-wide enhancements: scroll progress, scroll-reveal, particle canvas.
