@@ -57,15 +57,16 @@ body {
 }
 
 /* Subtle grain — adds depth without looking textured.
-   SVG noise filter, fixed positioning so it doesn't repeat-animate on scroll. */
+   Screen blend so it lifts on dark backgrounds (current dark-tech default)
+   and adds light noise without dominating. */
 body::before {
   content: '';
   position: fixed;
   inset: 0;
   pointer-events: none;
   z-index: 200;
-  opacity: 0.025;
-  mix-blend-mode: multiply;
+  opacity: 0.05;
+  mix-blend-mode: screen;
   background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='160' height='160'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>");
 }
 
@@ -869,7 +870,7 @@ a:hover {
   padding: var(--space-4);
   border: 1.5px solid var(--border);
   border-radius: var(--radius-md);
-  background: var(--bg);
+  background: color-mix(in srgb, var(--text) 4%, var(--bg));
   transition: transform var(--transition), border-color var(--transition), box-shadow var(--transition);
 }
 
