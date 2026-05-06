@@ -1413,19 +1413,31 @@ a:hover {
    viewport tall section with content centered/asymmetric, big type,
    no card chrome. */
 
+/* Rooms: generous padding, content-sized height. Statement room keeps a
+   soft min-height so the headline gets breathing room without being stuck
+   inside a forced 100dvh box (which made content overflow + felt LOUD). */
 .room {
-  min-height: 100vh;
-  min-height: 100dvh;
-  display: grid;
-  align-items: center;
   padding: var(--space-7) 0;
   position: relative;
 }
 
 @media (min-width: 768px) {
   .room {
+    padding: var(--space-8) 0;
+  }
+}
+
+@media (min-width: 1100px) {
+  .room {
     padding: var(--space-9) 0;
   }
+}
+
+.room-statement {
+  min-height: 70vh;
+  min-height: 70dvh;
+  display: grid;
+  align-items: center;
 }
 
 .room-statement .eyebrow {
