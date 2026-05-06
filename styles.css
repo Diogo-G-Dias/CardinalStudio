@@ -396,19 +396,19 @@ a:hover {
 
 .hero {
   position: relative;
-  padding: var(--space-7) 0 var(--space-7);
+  padding: var(--space-6) 0 var(--space-7);
   overflow: hidden;
 }
 
 @media (min-width: 768px) {
   .hero {
-    padding: var(--space-9) 0 var(--space-8);
+    padding: var(--space-7) 0 var(--space-8);
   }
 }
 
 @media (min-width: 1100px) {
   .hero {
-    padding: var(--space-10) 0 var(--space-9);
+    padding: var(--space-8) 0 var(--space-9);
   }
 }
 
@@ -422,8 +422,111 @@ a:hover {
   z-index: -1;
 }
 
+/* Hero uses the full container width on desktop so the two-column
+   layout (text + loadout) has room. On mobile/tablet it stacks. */
 .hero .container {
-  max-width: var(--container-narrow);
+  max-width: var(--container);
+}
+
+.hero-grid {
+  display: grid;
+  gap: var(--space-7);
+  align-items: end;
+}
+
+@media (min-width: 960px) {
+  .hero-grid {
+    grid-template-columns: minmax(0, 1.6fr) minmax(280px, 1fr);
+    gap: var(--space-8);
+    align-items: end;
+  }
+}
+
+.hero-text {
+  min-width: 0;
+}
+
+/* ─── Hero loadout card (right column, game-UI inspired) ──── */
+
+.hero-loadout {
+  background: color-mix(in srgb, var(--text) 4%, var(--bg));
+  border: 1.5px solid var(--border);
+  border-radius: var(--radius-md);
+  padding: var(--space-5);
+  box-shadow: 0 1px 0 color-mix(in srgb, var(--text) 6%, transparent);
+}
+
+.loadout-title {
+  font-family: ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+  font-size: 0.6875rem;
+  font-weight: 700;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--primary);
+  margin: 0 0 var(--space-4);
+  padding-bottom: var(--space-3);
+  border-bottom: 1px dashed color-mix(in srgb, var(--text) 18%, var(--bg));
+}
+
+.loadout-grid {
+  margin: 0;
+  display: grid;
+  gap: var(--space-3);
+}
+
+.loadout-row {
+  display: grid;
+  grid-template-columns: 4.5rem 1fr;
+  gap: var(--space-4);
+  align-items: baseline;
+}
+
+.loadout-row dt {
+  font-family: ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+  font-size: 0.6875rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: color-mix(in srgb, var(--text) 55%, var(--bg));
+}
+
+.loadout-row dd {
+  margin: 0;
+  font-size: 0.9375rem;
+  font-weight: 500;
+  color: var(--text);
+  line-height: 1.4;
+}
+
+.loadout-row a {
+  color: var(--primary);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.loadout-row a:hover {
+  text-decoration: underline;
+}
+
+.loadout-pulse {
+  display: inline-block;
+  width: 0.55em;
+  height: 0.55em;
+  border-radius: 50%;
+  background: var(--primary);
+  margin-right: 0.4em;
+  vertical-align: 0.05em;
+  box-shadow: 0 0 0 0 color-mix(in srgb, var(--primary) 60%, transparent);
+  animation: loadoutPulse 2.4s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+@keyframes loadoutPulse {
+  0%, 100% { box-shadow: 0 0 0 0 color-mix(in srgb, var(--primary) 50%, transparent); }
+  50% { box-shadow: 0 0 0 6px color-mix(in srgb, var(--primary) 0%, transparent); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .loadout-pulse { animation: none; }
 }
 
 .hero-headline {
