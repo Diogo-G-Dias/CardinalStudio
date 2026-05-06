@@ -53,6 +53,20 @@ body {
   background: var(--bg);
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
+  font-feature-settings: 'ss01', 'cv11';
+}
+
+/* Subtle grain — adds depth without looking textured.
+   SVG noise filter, fixed positioning so it doesn't repeat-animate on scroll. */
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 200;
+  opacity: 0.025;
+  mix-blend-mode: multiply;
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='160' height='160'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>");
 }
 
 img,
@@ -133,10 +147,10 @@ a:hover {
 .eyebrow {
   font-family: var(--font-body);
   font-size: 0.8125rem;
-  font-weight: 600;
-  letter-spacing: 0.12em;
+  font-weight: 700;
+  letter-spacing: 0.14em;
   text-transform: uppercase;
-  color: var(--primary);
+  color: color-mix(in srgb, var(--primary) 75%, var(--text));
   margin: 0 0 var(--space-3);
 }
 
@@ -227,7 +241,11 @@ a:hover {
   border-radius: var(--radius-md);
   border: 1.5px solid transparent;
   cursor: pointer;
-  transition: transform var(--transition), background var(--transition), border-color var(--transition);
+  transition:
+    transform 120ms cubic-bezier(0.2, 0.8, 0.2, 1),
+    background 160ms cubic-bezier(0.2, 0.8, 0.2, 1),
+    border-color 160ms cubic-bezier(0.2, 0.8, 0.2, 1),
+    box-shadow 160ms cubic-bezier(0.2, 0.8, 0.2, 1);
 }
 
 .btn:hover {
@@ -235,7 +253,17 @@ a:hover {
 }
 
 .btn:active {
-  transform: translateY(0);
+  transform: translateY(1px);
+  transition-duration: 60ms;
+}
+
+.btn:focus-visible {
+  outline: 2px solid color-mix(in srgb, var(--primary) 75%, var(--text));
+  outline-offset: 3px;
+}
+
+.btn-primary:hover {
+  box-shadow: 0 6px 18px color-mix(in srgb, var(--primary) 28%, transparent);
 }
 
 .btn-primary {
@@ -717,8 +745,8 @@ a:hover {
 }
 
 .case-card:hover {
-  transform: translateY(-2px);
-  border-color: var(--primary);
+  transform: translateY(-3px);
+  border-color: color-mix(in srgb, var(--text) 35%, var(--bg));
   box-shadow: var(--shadow-md);
 }
 
@@ -1078,6 +1106,7 @@ a:hover {
     var(--hero-grad-from, var(--secondary)) 0%,
     var(--hero-grad-to, var(--bg)) 100%
   );
+  color: var(--text-inverse);
 }
 
 .hero-with-bg::before {
@@ -1090,6 +1119,33 @@ a:hover {
 .hero-with-bg .container {
   position: relative;
   z-index: 1;
+}
+
+.hero-with-bg .hero-headline {
+  color: var(--text-inverse);
+}
+
+.hero-with-bg .hero-sub {
+  color: color-mix(in srgb, var(--text-inverse) 82%, transparent);
+}
+
+.hero-with-bg .eyebrow {
+  color: var(--accent);
+}
+
+.hero-with-bg .hero-mark-watermark {
+  color: color-mix(in srgb, var(--primary) 70%, transparent);
+  opacity: 0.18;
+}
+
+.hero-with-bg .btn-ghost {
+  color: var(--text-inverse);
+  border-color: color-mix(in srgb, var(--text-inverse) 50%, transparent);
+}
+
+.hero-with-bg .btn-ghost:hover {
+  border-color: var(--text-inverse);
+  background: color-mix(in srgb, var(--text-inverse) 10%, transparent);
 }
 
 .hero {
