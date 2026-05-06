@@ -1074,7 +1074,7 @@ a:hover {
   line-height: 1;
   letter-spacing: -0.05em;
   color: var(--primary);
-  opacity: 0.12;
+  opacity: 0.10;
   pointer-events: none;
   user-select: none;
   z-index: 0;
@@ -1082,9 +1082,9 @@ a:hover {
 
 @media (max-width: 767px) {
   .hero-mark-watermark {
-    right: -2vw;
-    font-size: clamp(14rem, 50vw, 22rem);
-    opacity: 0.08;
+    right: -8vw;
+    font-size: clamp(18rem, 65vw, 26rem);
+    opacity: 0.13;
   }
 }
 
