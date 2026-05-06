@@ -56,9 +56,8 @@ body {
   font-feature-settings: 'ss01', 'cv11';
 }
 
-/* Subtle grain — adds depth without looking textured.
-   Screen blend so it lifts on dark backgrounds (current dark-tech default)
-   and adds light noise without dominating. */
+/* Subtle grain + horizontal scan lines — game-feel atmospheric texture.
+   Screen blend lifts on dark backgrounds without dominating. */
 body::before {
   content: '';
   position: fixed;
@@ -68,6 +67,45 @@ body::before {
   opacity: 0.05;
   mix-blend-mode: screen;
   background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='160' height='160'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>");
+}
+
+body::after {
+  content: '';
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 199;
+  background-image: repeating-linear-gradient(
+    to bottom,
+    transparent 0,
+    transparent 2px,
+    color-mix(in srgb, var(--text) 100%, transparent) 2px,
+    color-mix(in srgb, var(--text) 100%, transparent) 3px
+  );
+  opacity: 0.018;
+}
+
+/* Section number prefix — game-zone style "// 01" before each h2.
+   Counter resets per main, increments per .section h2 (skips hero h1). */
+.site-main {
+  counter-reset: section-num;
+}
+
+.section h2 {
+  counter-increment: section-num;
+  position: relative;
+}
+
+.section h2::before {
+  content: '// ' counter(section-num, decimal-leading-zero);
+  display: block;
+  font-family: ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+  font-size: 0.6875rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  color: color-mix(in srgb, var(--primary) 80%, var(--text));
+  margin-bottom: var(--space-2);
+  opacity: 0.85;
 }
 
 img,
@@ -450,11 +488,35 @@ a:hover {
 /* ─── Hero loadout card (right column, game-UI inspired) ──── */
 
 .hero-loadout {
+  position: relative;
   background: color-mix(in srgb, var(--text) 4%, var(--bg));
   border: 1.5px solid var(--border);
   border-radius: var(--radius-md);
   padding: var(--space-5);
   box-shadow: 0 1px 0 color-mix(in srgb, var(--text) 6%, transparent);
+}
+
+/* HUD-style bracket corners on the loadout card — top-left and bottom-right */
+.hero-loadout::before,
+.hero-loadout::after {
+  content: '';
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  border: 2px solid var(--primary);
+  pointer-events: none;
+}
+
+.hero-loadout::before {
+  top: -2px;
+  left: -2px;
+  border-width: 2px 0 0 2px;
+}
+
+.hero-loadout::after {
+  bottom: -2px;
+  right: -2px;
+  border-width: 0 2px 2px 0;
 }
 
 .loadout-title {
