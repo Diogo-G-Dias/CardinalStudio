@@ -99,9 +99,10 @@
             type="button"
             class="theme-toggle"
             data-theme-toggle
-            aria-label="Toggle light and dark theme"
+            aria-label="Switch to dark theme"
           >
-            <span class="theme-toggle-label" aria-hidden="true">Dark</span>
+            <span class="theme-toggle-dot" aria-hidden="true"></span>
+            <span class="theme-toggle-label" aria-hidden="true">Light</span>
           </button>
 
         </div>
@@ -222,14 +223,19 @@
       </script>
 
     <script>
-      // Theme toggle handler (init was already run in <head> to prevent flash).
-      // Updates label, theme-color meta, and persists choice.
+      // Theme toggle handler (init runs in <head> before paint).
+      // Label reflects CURRENT theme (not the action), so when you're in
+      // dark mode the button reads "Dark" — clicking flips to light.
       (() => {
         const root = document.documentElement;
         const updateLabel = () => {
           const isDark = root.getAttribute('data-theme') === 'dark';
-          document.querySelectorAll('[data-theme-toggle] .theme-toggle-label').forEach((el) => {
-            el.textContent = isDark ? 'Light' : 'Dark';
+          document.querySelectorAll('[data-theme-toggle]').forEach((btn) => {
+            const labelEl = btn.querySelector('.theme-toggle-label');
+            if (labelEl) labelEl.textContent = isDark ? 'Dark' : 'Light';
+            btn.setAttribute('aria-pressed', isDark ? 'true' : 'false');
+            btn.setAttribute('aria-label', isDark ? 'Switch to light theme' : 'Switch to dark theme');
+            btn.dataset.themeState = isDark ? 'dark' : 'light';
           });
           const meta = document.querySelector('meta[name="theme-color"]');
           if (meta) meta.setAttribute('content', isDark ? '#1A1410' : '#F4F0E8');
