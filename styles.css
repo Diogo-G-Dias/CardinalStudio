@@ -17,9 +17,9 @@
   --space-9: 6rem;
   --space-10: 8rem;
 
-  --radius-sm: 4px;
-  --radius-md: 10px;
-  --radius-lg: 18px;
+  --radius-sm: 2px;
+  --radius-md: 4px;
+  --radius-lg: 8px;
 
   --container: 72rem;
   --container-narrow: 52rem;
@@ -159,13 +159,13 @@ a:hover {
 }
 
 .eyebrow {
-  font-family: var(--font-body);
+  font-family: ui-monospace, "SF Mono", Menlo, Consolas, monospace;
   font-size: 0.8125rem;
-  font-weight: 700;
-  letter-spacing: 0.14em;
-  text-transform: uppercase;
-  color: color-mix(in srgb, var(--primary) 75%, var(--text));
-  margin: 0 0 var(--space-2);
+  font-weight: 600;
+  letter-spacing: 0;
+  text-transform: none;
+  color: color-mix(in srgb, var(--primary) 80%, var(--text));
+  margin: 0 0 var(--space-3);
 }
 
 .skip-link {
