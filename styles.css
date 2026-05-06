@@ -165,7 +165,7 @@ a:hover {
   letter-spacing: 0.14em;
   text-transform: uppercase;
   color: color-mix(in srgb, var(--primary) 75%, var(--text));
-  margin: 0 0 var(--space-3);
+  margin: 0 0 var(--space-2);
 }
 
 .skip-link {
@@ -396,19 +396,19 @@ a:hover {
 
 .hero {
   position: relative;
-  padding: var(--space-5) 0 var(--space-7);
+  padding: var(--space-4) 0 var(--space-7);
   overflow: hidden;
 }
 
 @media (min-width: 768px) {
   .hero {
-    padding: var(--space-6) 0 var(--space-8);
+    padding: var(--space-4) 0 var(--space-8);
   }
 }
 
 @media (min-width: 1100px) {
   .hero {
-    padding: var(--space-6) 0 var(--space-9);
+    padding: var(--space-5) 0 var(--space-9);
   }
 }
 
