@@ -1124,70 +1124,109 @@ a:hover {
   color: var(--text);
 }
 
-/* ─── Footer ────────────────────────────────────────── */
+/* ─── Footer (editorial — quiet, single row on desktop) ─── */
 
 .site-footer {
   border-top: 1px solid var(--border);
-  padding: var(--space-8) 0 var(--space-6);
-  background: color-mix(in srgb, var(--secondary) 5%, var(--bg));
+  padding: var(--space-6) 0;
+  background: transparent;
+  font-size: 0.8125rem;
+  color: var(--muted);
 }
 
 .footer-grid {
-  display: grid;
-  gap: var(--space-7);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+  align-items: flex-start;
 }
 
 @media (min-width: 768px) {
   .footer-grid {
-    grid-template-columns: 1.6fr 1fr 1.2fr 1fr;
-    gap: var(--space-7);
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--space-6);
+    flex-wrap: wrap;
   }
 }
 
+.footer-brand { order: 0; }
+.footer-nav   { order: 1; }
+.footer-legal { order: 3; flex-basis: 100%; }
+.footer-meta  { order: 2; margin-left: auto; }
+
+@media (max-width: 767px) {
+  .footer-meta { margin-left: 0; }
+  .footer-legal { flex-basis: auto; }
+}
+
+/* Brand row — single inline line, smaller and quieter */
 .footer-logo {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4em;
+  margin: 0;
   font-family: var(--font-heading);
-  font-weight: 800;
-  font-size: 1.0625rem;
+  font-weight: 600;
+  font-size: 0.9375rem;
   color: var(--text);
-  margin: 0 0 var(--space-2);
+  letter-spacing: -0.005em;
+}
+
+.footer-logo .brand-mark {
+  width: 1.15rem;
+  height: 1.15rem;
+}
+
+.brand-mark-footer {
+  width: 1.15rem;
+  height: 1.15rem;
 }
 
 .footer-tagline {
-  color: var(--muted);
-  font-size: 0.875rem;
-  margin: 0;
+  display: none; /* dropped — keeps the editorial footer to one quiet line */
 }
 
+/* Nav links — inline, dot separators, mono small */
 .footer-nav {
-  display: grid;
-  gap: var(--space-2);
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-4);
+  align-items: center;
 }
 
 .footer-link {
-  font-size: 0.875rem;
+  font-family: var(--font-body);
+  font-size: 0.8125rem;
   color: var(--muted);
   text-decoration: none;
+  transition: color 160ms;
 }
 
 .footer-link:hover {
   color: var(--text);
 }
 
+/* Legal + ENI — spans full width on its own line, mono small,
+   restrained — the "small print" not a section. */
 .footer-legal,
 .footer-meta {
-  font-size: 0.8125rem;
+  font-size: 0.75rem;
   color: var(--muted);
+  margin: 0;
 }
 
-.footer-legal-line {
-  margin: 0 0 var(--space-2);
-}
-
+.footer-legal-line,
 .footer-id {
-  margin: 0 0 var(--space-2);
+  margin: 0;
+  font-family: var(--font-mono, ui-monospace, "SF Mono", Menlo, Consolas, monospace);
+  font-size: 0.6875rem;
+  letter-spacing: 0.04em;
+  color: color-mix(in srgb, var(--muted) 90%, var(--bg));
 }
 
-/* ─── Cookie banner ─────────────────────────────────── */
+/* ─── Cookie banner (editorial — sharp, restrained, mono) ─── */
 
 .cookie-banner {
   position: fixed;
@@ -1195,13 +1234,13 @@ a:hover {
   left: var(--space-4);
   right: var(--space-4);
   margin: 0 auto;
-  max-width: var(--container-narrow);
+  max-width: 36rem;
   padding: 0;
-  border: 1px solid var(--border);
-  border-radius: var(--radius-lg);
+  border: 1px solid var(--text);
+  border-radius: var(--radius-md);
   background: var(--bg);
   color: var(--text);
-  box-shadow: var(--shadow-md);
+  box-shadow: 0 8px 32px color-mix(in srgb, var(--text) 18%, transparent);
   z-index: 60;
 }
 
@@ -1212,20 +1251,22 @@ a:hover {
 .cookie-row {
   display: grid;
   gap: var(--space-4);
-  padding: var(--space-5);
+  padding: var(--space-4) var(--space-5);
 }
 
-@media (min-width: 768px) {
+@media (min-width: 640px) {
   .cookie-row {
     grid-template-columns: 1fr auto;
     align-items: center;
+    gap: var(--space-5);
   }
 }
 
 .cookie-text {
   margin: 0;
-  font-size: 0.9375rem;
-  color: var(--muted);
+  font-size: 0.875rem;
+  line-height: 1.45;
+  color: var(--text);
 }
 
 .cookie-actions {
@@ -1233,6 +1274,17 @@ a:hover {
   flex-wrap: wrap;
   gap: var(--space-2);
   justify-content: flex-end;
+}
+
+.cookie-actions .btn {
+  padding: var(--space-2) var(--space-4);
+  font-size: 0.8125rem;
+  border-radius: var(--radius-sm);
+}
+
+.cookie-actions .btn-ghost {
+  border-color: color-mix(in srgb, var(--text) 25%, var(--bg));
+  color: var(--text);
 }
 
 /* ─── Brand mark · # ────────────────────────────────── */
