@@ -4,6 +4,6 @@
   "buildCommand": null,
   "installCommand": null,
   "outputDirectory": null,
-  "cleanUrls": false,
+  "cleanUrls": true,
   "trailingSlash": false
 }
