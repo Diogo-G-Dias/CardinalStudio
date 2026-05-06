@@ -82,7 +82,7 @@ body::after {
     color-mix(in srgb, var(--text) 100%, transparent) 2px,
     color-mix(in srgb, var(--text) 100%, transparent) 3px
   );
-  opacity: 0.018;
+  opacity: 0.01;
 }
 
 /* Section number prefix — game-zone style "// 01" before each h2.
@@ -99,7 +99,7 @@ body::after {
 .section h2::before {
   content: '// ' counter(section-num, decimal-leading-zero);
   display: block;
-  font-family: ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+  font-family: var(--font-mono, ui-monospace, "SF Mono", Menlo, Consolas, monospace);
   font-size: 0.6875rem;
   font-weight: 700;
   letter-spacing: 0.18em;
@@ -198,7 +198,7 @@ a:hover {
 }
 
 .eyebrow {
-  font-family: ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+  font-family: var(--font-mono, ui-monospace, "SF Mono", Menlo, Consolas, monospace);
   font-size: 0.8125rem;
   font-weight: 600;
   letter-spacing: 0;
@@ -520,7 +520,7 @@ a:hover {
 }
 
 .loadout-title {
-  font-family: ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+  font-family: var(--font-mono, ui-monospace, "SF Mono", Menlo, Consolas, monospace);
   font-size: 0.6875rem;
   font-weight: 700;
   letter-spacing: 0.22em;
@@ -545,7 +545,7 @@ a:hover {
 }
 
 .loadout-row dt {
-  font-family: ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+  font-family: var(--font-mono, ui-monospace, "SF Mono", Menlo, Consolas, monospace);
   font-size: 0.6875rem;
   font-weight: 700;
   letter-spacing: 0.12em;
@@ -1253,6 +1253,51 @@ a:hover {
 .brand-mark-footer {
   width: 1.75rem;
   height: 1.75rem;
+}
+
+/* ─── Nav status pulse — "Open for new builds" live signal ──── */
+
+.nav-status {
+  display: none;
+  align-items: center;
+  gap: 0.45rem;
+  margin-left: var(--space-3);
+  padding: 4px 9px 4px 8px;
+  border: 1px solid color-mix(in srgb, var(--primary) 35%, transparent);
+  border-radius: 999px;
+  background: color-mix(in srgb, var(--primary) 8%, transparent);
+}
+
+@media (min-width: 768px) {
+  .nav-status { display: inline-flex; }
+}
+
+.nav-status-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--primary);
+  flex-shrink: 0;
+  box-shadow: 0 0 0 0 color-mix(in srgb, var(--primary) 60%, transparent);
+  animation: navStatusPulse 2.4s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+.nav-status-label {
+  font-family: var(--font-mono, ui-monospace, "SF Mono", Menlo, Consolas, monospace);
+  font-size: 0.6875rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--primary);
+}
+
+@keyframes navStatusPulse {
+  0%, 100% { box-shadow: 0 0 0 0 color-mix(in srgb, var(--primary) 55%, transparent); }
+  50%      { box-shadow: 0 0 0 7px color-mix(in srgb, var(--primary) 0%, transparent); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .nav-status-dot { animation: none; }
 }
 
 .hero-mark-watermark {
