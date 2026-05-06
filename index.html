@@ -48,6 +48,13 @@
         document.documentElement.setAttribute('data-theme', stored || (systemDark ? 'dark' : 'light'));
       })();
     </script>
+
+    <!-- Cal.com element-click embed -->
+    <script type="text/javascript">
+      (function (C, A, L) { let p = function (a, ar) { a.q.push(ar); }; let d = C.document; C.Cal = C.Cal || function () { let cal = C.Cal; let ar = arguments; if (!cal.loaded) { cal.ns = {}; cal.q = cal.q || []; d.head.appendChild(d.createElement("script")).src = A; cal.loaded = true; } if (ar[0] === L) { const api = function () { p(api, arguments); }; const namespace = ar[1]; api.q = api.q || []; if(typeof namespace === "string"){cal.ns[namespace] = cal.ns[namespace] || api;p(cal.ns[namespace], ar);p(cal, ["initNamespace", namespace]);} else p(cal, ar); return;} p(cal, ar); }; })(window, "https://app.cal.com/embed/embed.js", "init");
+      Cal("init", "15min", {origin:"https://app.cal.com"});
+      Cal.ns["15min"]("ui", {"hideEventTypeDetails":false,"layout":"month_view"});
+    </script>
   </head>
 
   <body>
@@ -245,6 +252,9 @@
       <a class="btn btn-primary" href="mailto:diogo@cardinalstudio.dev">
         Send an email
       </a>
+        <a class="btn btn-ghost" href="https://cal.com/diogo-dias-zg18dh/15min">
+          Book 15 min
+        </a>
     </div>
   </div>
 </section>
@@ -336,6 +346,19 @@
           root.setAttribute('data-theme', next);
           localStorage.setItem('cs-theme', next);
           updateLabel();
+        });
+      })();
+    </script>
+
+    <script>
+      // Decorate any cal.com link in the page with the data-cal-* attributes
+      // Cal.com's embed JS expects, so the existing CTA <a> opens the modal
+      // instead of navigating away. Idempotent — safe to re-run.
+      (function () {
+        document.querySelectorAll('a[href*="cal.com/diogo-dias-zg18dh"]').forEach(function (el) {
+          el.setAttribute('data-cal-link', 'diogo-dias-zg18dh/15min');
+          el.setAttribute('data-cal-namespace', '15min');
+          el.setAttribute('data-cal-config', '{"layout":"month_view","useSlotsViewOnSmallScreen":"true"}');
         });
       })();
     </script>
