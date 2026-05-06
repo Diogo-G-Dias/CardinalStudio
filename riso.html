@@ -26,22 +26,26 @@
 
     <style>
       :root {
-        --primary: #FF4655;
-        --secondary: #0E1A2E;
-        --accent: #4FB6FF;
-        --bg: #07101F;
-        --text: #E0EDFF;
-        --text-inverse: #E0EDFF;
-        --muted: #6E8099;
-        --border: #182640;
+        --primary: #FF5947;
+        --secondary: #2C5F8D;
+        --accent: #FFC93C;
+        --bg: #F5F1E8;
+        --text: #1A1A2E;
+        --text-inverse: #F5F1E8;
+        --muted: #6B6378;
+        --border: #D8D0BC;
         --font-heading: Bricolage Grotesque, sans-serif;
         --font-body: Inter, sans-serif;
       }
     </style>
   
+    <style>
+      body::before { mix-blend-mode: multiply !important; opacity: 0.06 !important; }
+      body::after { opacity: 0.014 !important; }
+    </style>
   </head>
 
-  <body data-theme="blue">
+  <body data-theme="riso">
     <a class="skip-link" href="#main">Skip to content</a>
 
     <div class="scroll-progress" aria-hidden="true"></div>
@@ -458,6 +462,6 @@
       })();
     </script>
 
-    <div style="position:fixed;bottom:20px;left:20px;z-index:9999;background:#0E1A2E;color:#E0EDFF;padding:8px 14px;font-family:'Bricolage Grotesque',sans-serif;font-weight:700;font-size:11px;letter-spacing:0.08em;text-transform:uppercase;border-radius:4px;border:1.5px solid #FF4655;box-shadow:0 4px 16px rgba(0,0,0,0.3);max-width:calc(100vw - 40px)">Blue · <a href="/" style="color:#4FB6FF;text-decoration:underline">Celeste (default)</a> · <a href="/celeste-light.html" style="color:#4FB6FF;text-decoration:underline">Celeste · Light</a></div>
+    <div style="position:fixed;bottom:20px;left:20px;z-index:9999;background:#FFFFFF;color:#1A1A2E;padding:8px 14px;font-family:'Bricolage Grotesque',sans-serif;font-weight:700;font-size:11px;letter-spacing:0.08em;text-transform:uppercase;border-radius:4px;border:1.5px solid #FF5947;box-shadow:0 4px 16px rgba(0,0,0,0.3);max-width:calc(100vw - 40px)">Risograph · <a href="/" style="color:#2C5F8D;text-decoration:underline">Celeste (default)</a> · <a href="/celeste-light.html" style="color:#2C5F8D;text-decoration:underline">Celeste · Light</a> · <a href="/tile.html" style="color:#2C5F8D;text-decoration:underline">Mediterranean Tile</a> · <a href="/slime.html" style="color:#2C5F8D;text-decoration:underline">Toxic Slime</a></div>
   </body>
 </html>
