@@ -410,9 +410,30 @@ button {
   color: var(--bg);
 }
 
-@media (max-width: 640px) {
+@media (max-width: 720px) {
   .nav-status { display: none; }
-  .nav-links { gap: var(--space-4); }
+  .nav-row {
+    flex-wrap: wrap;
+    gap: var(--space-3);
+  }
+  .nav-links {
+    order: 3;
+    width: 100%;
+    justify-content: flex-start;
+    overflow-x: auto;
+    overscroll-behavior-x: contain;
+    -webkit-overflow-scrolling: touch;
+    padding: 0.5rem 0 0.25rem 0;
+    margin-top: 0.25rem;
+    border-top: 1px solid var(--border-hair);
+    gap: var(--space-4);
+    scrollbar-width: none;
+  }
+  .nav-links::-webkit-scrollbar { display: none; }
+  .nav-link {
+    flex-shrink: 0;
+    font-size: 0.92rem;
+  }
 }
 
 /* ─── Hero (stat-block) ────────────────────────────────── */
@@ -893,6 +914,179 @@ button {
   font-size: 0.9rem;
   color: var(--text-muted);
   line-height: 1.5;
+}
+
+/* ─── Step list — process page ──────────────────────────────
+   Numbered list with mono counter chip on a vertical rail. Heavier than
+   .patch-list since this IS the page content, not a side-detail. */
+.step-list {
+  list-style: none;
+  padding: 0;
+  margin: var(--space-7) 0 0 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-7);
+  counter-reset: step-counter;
+}
+.step-entry {
+  position: relative;
+  padding-left: clamp(2.4rem, 5vw, 3.6rem);
+  border-left: 2px solid var(--border-soft);
+  padding-bottom: var(--space-4);
+}
+.step-entry::before {
+  content: counter(step-counter, decimal-leading-zero);
+  counter-increment: step-counter;
+  position: absolute;
+  top: -0.4rem;
+  left: -1.1rem;
+  font-family: var(--font-mono);
+  font-weight: 700;
+  font-size: 1.35rem;
+  color: var(--primary);
+  background: var(--bg);
+  padding: 0 0.55rem;
+  letter-spacing: 0.04em;
+  line-height: 1;
+}
+.step-eyebrow {
+  display: inline-block;
+  margin: 0 0 var(--space-2) 0;
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--primary);
+}
+.step-title {
+  margin: 0 0 var(--space-3) 0;
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: clamp(1.25rem, 2.2vw, 1.6rem);
+  letter-spacing: -0.01em;
+  line-height: 1.25;
+}
+.step-body {
+  margin: 0 0 var(--space-3) 0;
+  font-size: 1rem;
+  line-height: 1.6;
+  color: var(--text);
+}
+.step-body:last-child { margin-bottom: 0; }
+.step-meta {
+  margin-top: var(--space-3);
+  padding: 0.4rem 0.6rem;
+  background: color-mix(in srgb, var(--primary) 6%, transparent);
+  border-left: 2px solid var(--primary);
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  letter-spacing: 0.04em;
+  color: var(--text);
+}
+
+/* ─── Pillar grid — about page ──────────────────────────────
+   Two-up on desktop, stack on mobile. Each pillar is title (h3) + body. */
+.pillar-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-7);
+  margin-top: var(--space-6);
+}
+@media (min-width: 768px) {
+  .pillar-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-7) var(--space-8);
+  }
+}
+.pillar h3 {
+  margin: 0 0 var(--space-3) 0;
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: 1.35rem;
+  letter-spacing: -0.01em;
+  line-height: 1.25;
+}
+.pillar h3::before {
+  content: "//";
+  display: inline-block;
+  margin-right: 0.5rem;
+  color: var(--primary);
+  font-family: var(--font-mono);
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  font-size: 0.95rem;
+}
+.pillar p {
+  margin: 0 0 var(--space-3) 0;
+  font-size: 1rem;
+  line-height: 1.6;
+  color: var(--text);
+}
+.pillar p:last-child { margin-bottom: 0; }
+
+/* ─── FAQ list — contact page ────────────────────────────── */
+.faq-list {
+  list-style: none;
+  padding: 0;
+  margin: var(--space-6) 0 0 0;
+  border-top: 1px solid var(--border-soft);
+}
+.faq-item {
+  padding: var(--space-5) 0;
+  border-bottom: 1px solid var(--border-soft);
+}
+.faq-q {
+  margin: 0 0 0.5rem 0;
+  font-family: var(--font-heading);
+  font-weight: 600;
+  font-size: 1.05rem;
+  color: var(--text);
+  letter-spacing: -0.005em;
+}
+.faq-q::before {
+  content: "Q.";
+  color: var(--primary);
+  font-family: var(--font-mono);
+  font-weight: 600;
+  font-size: 0.85em;
+  margin-right: 0.6rem;
+  letter-spacing: 0.06em;
+}
+.faq-a {
+  margin: 0;
+  font-size: 0.95rem;
+  line-height: 1.55;
+  color: var(--text-muted);
+}
+
+/* Contact page — Direct Line panel rendered on cream bg
+   (the talk-direct-line variant for the room-talk gradient is darker). */
+.contact-direct-line {
+  margin-top: var(--space-6);
+  padding: var(--space-6);
+  background: var(--text);
+  color: var(--text-inverse);
+  border: 2px solid var(--text);
+  box-shadow: 8px 8px 0 0 var(--primary);
+  position: relative;
+  max-width: 38rem;
+}
+.contact-direct-line::before {
+  content: "";
+  position: absolute;
+  top: -10px;
+  left: 18px;
+  width: 12px;
+  height: 12px;
+  background: var(--secondary);
+  border: 2px solid var(--text);
+}
+.contact-direct-line .talk-direct-label,
+.contact-direct-line .talk-direct-email,
+.contact-direct-line .talk-direct-meta {
+  /* Reuses the existing .talk-direct-* styles which target var(--text-inverse)
+     for the foreground — works on this dark panel too. */
 }
 
 /* Copy-clipboard toast — small "[Copied]" pill that pops up next to email links

@@ -2,7 +2,7 @@
   <rect width="64" height="64" rx="12" fill="#14171F"/>
   <text x="32" y="46"
         text-anchor="middle"
-        font-family="Bricolage Grotesque, ui-sans-serif, system-ui, sans-serif"
+        font-family="Archivo, ui-sans-serif, system-ui, sans-serif"
         font-size="48"
         font-weight="800"
         fill="#D62828"

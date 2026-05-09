@@ -35,7 +35,17 @@ Based in Alentejo, Portugal — works remotely, worldwide. Languages: PT-PT (pri
 - Tagline: "Not an agency. A player." The studio works best for brands the operator is themselves a fan of.
 - Founded: 2026. Currently running an early-adopter cohort with discounted setup fees.
 
+## All pages
+
+- [Home](https://cardinalstudio.dev/) — landing, latest work, patch notes, talk
+- [Work](https://cardinalstudio.dev/work.html) — selected published cases
+- [Process](https://cardinalstudio.dev/process.html) — the four-step engagement: email intake → 30-min call → fixed scope → build
+- [About](https://cardinalstudio.dev/about.html) — why solo, why brand-led, where Cardinal Studio is NOT a fit
+- [Contact](https://cardinalstudio.dev/contact.html) — direct line + FAQ (response time, geography, languages, NDAs)
+
 ## Localised version
 
 - English (default): https://cardinalstudio.dev/
 - Português (PT-PT): https://cardinalstudio.dev/pt-PT/
+
+Each page has a PT-PT mirror at /pt-PT/<page>.
