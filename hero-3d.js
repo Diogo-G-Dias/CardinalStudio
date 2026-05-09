@@ -63,9 +63,9 @@ import * as THREE from 'three';
   const right = new THREE.Mesh(beamV, mat); right.position.x = +OFF;
   group.add(top, bot, left, right);
 
-  // Default angle — slight tilt so depth is visible at rest.
-  const REST_X = -0.12;
-  const REST_Y = 0.42;
+  // Default angle — face-on at rest. Idle drift + cursor parallax do the work.
+  const REST_X = 0;
+  const REST_Y = 0;
   group.rotation.set(REST_X, REST_Y, 0);
   scene.add(group);
 
