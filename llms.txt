@@ -1,0 +1,41 @@
+# Cardinal Studio
+
+> Solo digital studio in Alentejo, Portugal. Diogo Dias rebuilds websites for brands worth being a fan of — gaming studios, IP with fanbase, small businesses run by people who are themselves fans of what they sell. Hand-built static sites with brand voice extraction and SEO + AI-search-optimisation foundation included as standard. Bilingual PT-PT / EN delivery.
+
+## Services
+
+- [Brand-led website](https://cardinalstudio.dev/work.html): hand-built static site. Custom design, brand voice extraction, copy in the founder's voice, SEO + AISEO pass (JSON-LD schema, sitemap, llms.txt, OG card, search-console verification, Google Business Profile setup) included as standard.
+- [Email + calendar agent](https://cardinalstudio.dev/): automated triage on the client's inbox, drafted replies in the client's voice, calendar booking integration via Cal.com or similar. Available on the Complete tier.
+
+## Coverage area
+
+Based in Alentejo, Portugal — works remotely, worldwide. Languages: PT-PT (primary), English, Spanish.
+
+## Contact
+
+- Email: diogo@cardinalstudio.dev (replies under 24h on weekdays)
+- Booking: https://cal.com/diogo-dias-zg18dh/15min (15-min intro call, free, no pitch deck)
+- No forms, no funnels — Diogo reads every email personally.
+
+## How engagements work
+
+1. Email with what you need.
+2. 30-minute discovery call (free, no pitch deck).
+3. Fixed scope and timeline written up.
+4. Build, iterate, ship.
+
+## Recent work
+
+- [CPS Plastering & Rendering](https://cpsplastering.cardinalstudio.dev/): reimagined website for a Coventry plastering and rendering business. Drag-to-compare case studies, quote form, embedded Google + Trustpilot social proof.
+
+## About the studio
+
+- Founder: Diogo Dias, solo operator, ENI (Portuguese sole-proprietor status).
+- Multi-disciplinary: web development, design, game development, brand, product management.
+- Tagline: "Not an agency. A player." The studio works best for brands the operator is themselves a fan of.
+- Founded: 2026. Currently running an early-adopter cohort with discounted setup fees.
+
+## Localised version
+
+- English (default): https://cardinalstudio.dev/
+- Português (PT-PT): https://cardinalstudio.dev/pt-PT/

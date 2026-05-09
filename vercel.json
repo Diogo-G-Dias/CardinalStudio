@@ -5,5 +5,8 @@
   "installCommand": null,
   "outputDirectory": null,
   "cleanUrls": true,
-  "trailingSlash": false
+  "trailingSlash": false,
+  "rewrites": [
+    { "source": "/pt-PT", "destination": "/pt-PT/index.html" }
+  ]
 }

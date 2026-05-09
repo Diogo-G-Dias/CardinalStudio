@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+
+# Be polite — these are scratch / backup paths if they ever appear.
+Disallow: /.tmp/
+Disallow: /site.bak-
+
+Sitemap: https://cardinalstudio.dev/sitemap.xml
