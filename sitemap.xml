@@ -1,65 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-        xmlns:xhtml="http://www.w3.org/1999/xhtml">
-  <url>
-    <loc>https://cardinalstudio.dev/</loc>
-    <changefreq>monthly</changefreq>
-    <priority>1.0</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://cardinalstudio.dev/" />
-    <xhtml:link rel="alternate" hreflang="pt-PT" href="https://cardinalstudio.dev/pt-PT/" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://cardinalstudio.dev/" />
-  </url>
-  <url>
-    <loc>https://cardinalstudio.dev/work.html</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://cardinalstudio.dev/work.html" />
-    <xhtml:link rel="alternate" hreflang="pt-PT" href="https://cardinalstudio.dev/pt-PT/work.html" />
-  </url>
-  <url>
-    <loc>https://cardinalstudio.dev/process.html</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://cardinalstudio.dev/process.html" />
-    <xhtml:link rel="alternate" hreflang="pt-PT" href="https://cardinalstudio.dev/pt-PT/process.html" />
-  </url>
-  <url>
-    <loc>https://cardinalstudio.dev/about.html</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://cardinalstudio.dev/about.html" />
-    <xhtml:link rel="alternate" hreflang="pt-PT" href="https://cardinalstudio.dev/pt-PT/about.html" />
-  </url>
-  <url>
-    <loc>https://cardinalstudio.dev/contact.html</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://cardinalstudio.dev/contact.html" />
-    <xhtml:link rel="alternate" hreflang="pt-PT" href="https://cardinalstudio.dev/pt-PT/contact.html" />
-  </url>
-  <url>
-    <loc>https://cardinalstudio.dev/pt-PT/</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://cardinalstudio.dev/pt-PT/work.html</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://cardinalstudio.dev/pt-PT/process.html</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://cardinalstudio.dev/pt-PT/about.html</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://cardinalstudio.dev/pt-PT/contact.html</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
+<!-- PLACEHOLDER domain — replace https://cardinal.studio with the live URL at deploy. -->
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url><loc>https://cardinal.studio/</loc><changefreq>monthly</changefreq><priority>1.0</priority></url>
+  <url><loc>https://cardinal.studio/services.html</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://cardinal.studio/contact.html</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://cardinal.studio/about.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://cardinal.studio/blog.html</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://cardinal.studio/post.html</loc><changefreq>yearly</changefreq><priority>0.6</priority></url>
 </urlset>

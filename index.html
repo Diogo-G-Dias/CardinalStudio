@@ -1,484 +1,452 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Cardinal Studio — Not an agency. A player.</title>
-    <meta name="description" content="Cardinal Studio. Not an agency. A player. I rebuild websites for brands worth being a fan of — solo studio, from Portugal." />
-
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,500;12..96,600;12..96,700;12..96,800&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500;600;700&display=swap" />
-    <link rel="stylesheet" href="styles.css" />
-    <link rel="icon" type="image/svg+xml" href="favicon.svg" />
-    <link rel="icon" type="image/png" sizes="192x192" href="favicon-192.png" />
-    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png" />
-
-    <meta name="theme-color" content="#F4EBD0" />
-
-    <link rel="canonical" href="https://cardinalstudio.dev/" />
-    <meta property="og:type" content="website" />
-    <meta property="og:site_name" content="Cardinal Studio" />
-    <meta property="og:locale" content="en" />
-    <meta property="og:locale:alternate" content="pt_PT" />
-    <meta property="og:url" content="https://cardinalstudio.dev/" />
-    <meta property="og:title" content="Cardinal Studio — Not an agency. A player." />
-    <meta property="og:description" content="Cardinal Studio. I rebuild websites for brands worth being a fan of — solo studio, from Portugal." />
-    <meta property="og:image" content="https://cardinalstudio.dev/og-image.png" />
-    <meta property="og:image:width" content="1200" />
-    <meta property="og:image:height" content="630" />
-    <meta property="og:image:type" content="image/png" />
-    <meta property="og:image:alt" content="Cardinal Studio — solo digital studio from Alentejo, Portugal." />
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Cardinal Studio — Not an agency. A player." />
-    <meta name="twitter:description" content="Cardinal Studio. I rebuild websites for brands worth being a fan of — solo studio, from Portugal." />
-    <meta name="twitter:image" content="https://cardinalstudio.dev/og-image.png" />
-
-    <link rel="alternate" hreflang="en" href="https://cardinalstudio.dev/" />
-    <link rel="alternate" hreflang="pt-PT" href="https://cardinalstudio.dev/pt-PT/" />
-    <link rel="alternate" hreflang="x-default" href="https://cardinalstudio.dev/" />
-
-    <script type="application/ld+json">
+<head>
+<meta charset="UTF-8">
+<script>try{if(localStorage.getItem("cardinal-theme")==="light")document.documentElement.setAttribute("data-theme","light");}catch(e){}</script>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Cardinal Studio — One builder, the whole stack</title>
+<meta name="description" content="Cardinal Studio builds complete digital systems for small businesses — website, CRM, and AI/workflow automation — designed, built, and run by one technical founder.">
+<!-- Social / canonical. PLACEHOLDER domain — replace https://cardinal.studio with the
+     live URL at deploy, and generate assets/og-default.png (1200x630) via the SEO runbook. -->
+<link rel="canonical" href="https://cardinal.studio/">
+<meta property="og:site_name" content="Cardinal Studio">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://cardinal.studio/">
+<meta property="og:title" content="Cardinal Studio — One builder, the whole stack">
+<meta property="og:description" content="Cardinal Studio builds complete digital systems for small businesses — website, CRM, and AI/workflow automation — designed, built, and run by one technical founder.">
+<meta property="og:image" content="https://cardinal.studio/assets/og-default.png">
+<meta property="og:locale" content="en_GB">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" type="image/png" sizes="192x192" href="favicon-192.png">
+<link rel="icon" href="favicon.ico" sizes="any">
+<link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;600&display=swap">
+<link rel="stylesheet" href="assets/site.css">
+<noscript><style>[data-reveal]{opacity:1!important;transform:none!important}</style></noscript>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
     {
-      "@context": "https://schema.org",
       "@type": "ProfessionalService",
+      "@id": "https://cardinal.studio/#studio",
       "name": "Cardinal Studio",
-      "alternateName": "#",
-      "url": "https://cardinalstudio.dev",
-      "email": "diogo@cardinalstudio.dev",
-      "description": "Solo digital studio. I rebuild websites for brands worth being a fan of — gaming studios, IP with fanbase, small businesses run by people who are themselves fans of what they sell.",
-      "image": "https://cardinalstudio.dev/og-image.png",
-      "logo": "https://cardinalstudio.dev/favicon-192.png",
-      "founder": {
-        "@type": "Person",
-        "name": "Diogo Dias",
-        "jobTitle": "Founder",
-        "knowsLanguage": ["pt-PT", "en", "es"]
+      "description": "Independent digital studio — one technical founder who builds a small business's entire digital layer end to end: website, integrated CRM, and AI/workflow automation, with no agency handoffs.",
+      "url": "https://cardinal.studio/",
+      "image": "https://cardinal.studio/assets/og-default.png",
+      "logo": "https://cardinal.studio/assets/logo.png",
+      "email": "hello@cardinal.studio",
+      "slogan": "One builder, the whole stack.",
+      "knowsLanguage": [
+        "en",
+        "pt"
+      ],
+      "areaServed": {
+        "@type": "Place",
+        "name": "Remote — worldwide"
       },
       "address": {
         "@type": "PostalAddress",
-        "addressRegion": "Alentejo",
+        "addressLocality": "Lisbon",
         "addressCountry": "PT"
       },
-      "areaServed": [
-        {"@type": "Country", "name": "Portugal"},
-        {"@type": "Place", "name": "Worldwide (remote)"}
+      "sameAs": [
+        "https://work.cardinal.studio"
       ],
-      "knowsLanguage": ["pt-PT", "en", "es"],
-      "knowsAbout": [
-        "Web design",
-        "Brand identity",
-        "Game-feel UI",
-        "Email automation",
-        "SEO and AI search optimisation",
-        "Calendar booking integration"
-      ],
-      "currenciesAccepted": "EUR",
       "hasOfferCatalog": {
         "@type": "OfferCatalog",
-        "name": "Cardinal Studio services",
+        "name": "Services",
         "itemListElement": [
           {
             "@type": "Offer",
             "itemOffered": {
               "@type": "Service",
-              "name": "Brand-led website",
-              "description": "Hand-built static site with custom design, brand voice extraction, and SEO/AISEO foundation."
+              "name": "Websites",
+              "description": "Fast, conversion-built websites coded from scratch, with every form and CTA writing straight into the CRM."
             }
           },
           {
             "@type": "Offer",
             "itemOffered": {
               "@type": "Service",
-              "name": "Email and calendar agent",
-              "description": "Automated triage and drafted replies in the client's voice, with calendar booking integration."
+              "name": "Integrated CRM",
+              "description": "A client database modelled around how the business works — contacts, deals, history, stages — wired into the same system as the site."
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "AI Automation & Integrations",
+              "description": "AI and API integrations that draft follow-ups, summarise enquiries, route leads, and sync existing tools."
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Workflow & Calendar Automation",
+              "description": "Automated follow-ups, reminders, and booking, so a new lead is logged, acknowledged, and slotted toward the calendar without manual steps."
             }
           }
         ]
       }
-    }
-    </script>
-
-    <script>
-      // Set .js class before paint so reveal-on-scroll only hides content
-      // when JS is actually available to reveal it back.
-      document.documentElement.classList.add('js');
-    </script>
-
-    <script type="importmap">
+    },
     {
-      "imports": {
-        "three": "https://unpkg.com/three@0.171.0/build/three.module.min.js"
+      "@type": "WebSite",
+      "@id": "https://cardinal.studio/#website",
+      "name": "Cardinal Studio",
+      "url": "https://cardinal.studio/",
+      "inLanguage": "en",
+      "publisher": {
+        "@id": "https://cardinal.studio/#studio"
       }
     }
-    </script>
-  </head>
+  ]
+}
+</script>
+</head>
+<body>
+<div class="bg-field"></div>
+<div class="bg-grid"></div>
+<canvas class="bg-canvas" aria-hidden="true"></canvas>
 
-  <body>
-    <a class="skip-link" href="#main">Skip to content</a>
+<div id="site-header"><noscript>
+  <div class="wrap nav" style="padding:14px 0;display:flex;gap:20px;align-items:center;flex-wrap:wrap">
+    <a class="brand" href="index.html">Cardinal Studio</a>
+    <nav aria-label="Primary" style="display:flex;gap:16px;flex-wrap:wrap"><a href="index.html">Home</a><a href="about.html">About</a><a href="services.html">Services</a><a href="blog.html">Blog</a><a href="contact.html">Contact</a></nav>
+  </div>
+</noscript></div>
 
-    <div class="scroll-progress" aria-hidden="true"></div>
+<main>
 
-    <header class="site-nav" role="banner">
-      <div class="container nav-row">
-        <a class="nav-logo" href="./" aria-label="Cardinal Studio">
-          <svg class="brand-mark" viewBox="0 0 32 32" aria-hidden="true" focusable="false">
-            <text x="16" y="24" text-anchor="middle" font-family="Bricolage Grotesque, sans-serif" font-size="28" font-weight="800" fill="#D62828" letter-spacing="-1">#</text>
-          </svg>
-          <span class="brand-name">Cardinal Studio</span>
-          <span class="nav-status" aria-label="Status: open for new builds">
-            <span class="nav-status-dot" aria-hidden="true"></span>
-            <span class="nav-status-label">Open</span>
-          </span>
+  <!-- ============ HERO ============ -->
+  <section class="section hero">
+    <div class="wrap">
+      <div class="hero-grid">
+        <div class="hero-copy">
+          <h1 class="h-display" data-reveal style="--d:.05s">
+            One builder,<br>the <span class="text-red">whole stack</span>.
+          </h1>
+          <p class="lead" data-reveal style="--d:.12s">
+            Your whole digital layer — site, CRM, and automation — designed, built,
+            and run by the person who actually understands it.
+          </p>
+          <ul class="hero-points" data-reveal style="--d:.16s">
+            <li>One connected system, not separate tools bolted together</li>
+            <li>End to end by one technical person — no agencies, no handoffs</li>
+            <li>Tailored to your business on a proven foundation</li>
+          </ul>
+          <div class="flex center wrap-gap" data-reveal style="--d:.2s; margin-top: 8px;">
+            <a class="btn btn--primary btn--lg" data-wa="Message on WhatsApp" href="#"></a>
+            <a class="link-arrow" href="services.html">See what I build <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 8h10M9 4l4 4-4 4"/></svg></a>
+          </div>
+          <div class="hero-meta" data-reveal style="--d:.28s">
+            <span class="chip chip--available"><span class="dot"></span> Available for new builds</span>
+          </div>
+        </div>
+
+        <!-- Hero system visual: live integrated-system demo -->
+        <div class="hero-visual" data-reveal style="--d:.18s">
+          <div class="sysflow" id="sysflow" role="img"
+               aria-label="A lead flowing through one connected system: captured on the site, written into the CRM, drafted a follow-up by automation, and booked into the calendar.">
+            <div class="sysflow__head">
+              <span class="sysflow__tag">LIVE</span>
+              <span class="sysflow__title">One lead. One system.</span>
+            </div>
+            <div class="sysflow__stage">
+              <svg class="sysflow__wires" aria-hidden="true" focusable="false"></svg>
+              <div class="sysflow__packet" data-sf-packet aria-hidden="true"></div>
+              <div class="sysflow__nodes">
+                <div class="sf-node is-active" data-node="site">
+                  <div class="sf-node__head"><span class="sf-dot"></span><span class="sf-label">SITE</span></div>
+                  <form class="sf-form" data-sf-form>
+                    <input class="sf-input" data-sf-input type="text" maxlength="22" autocomplete="off"
+                           placeholder="Try it — type a name" aria-label="Type a visitor's name to send it through the system">
+                    <button class="sf-send" type="submit" aria-label="Send through the system">
+                      <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
+                    </button>
+                  </form>
+                </div>
+                <div class="sf-node" data-node="crm">
+                  <div class="sf-node__head"><span class="sf-dot"></span><span class="sf-label">CRM</span></div>
+                  <div class="sf-card" data-sf-out="crm">
+                    <span class="sf-card__name">—</span><span class="sf-card__meta">new contact · captured</span>
+                  </div>
+                </div>
+                <div class="sf-node" data-node="auto">
+                  <div class="sf-node__head"><span class="sf-dot"></span><span class="sf-label">AUTOMATION</span></div>
+                  <div class="sf-card" data-sf-out="auto">
+                    <span class="sf-card__name">follow-up drafted</span><span class="sf-card__meta">in your voice · ready to send</span>
+                  </div>
+                </div>
+                <div class="sf-node" data-node="cal">
+                  <div class="sf-node__head"><span class="sf-dot"></span><span class="sf-label">CALENDAR</span></div>
+                  <div class="sf-card" data-sf-out="cal">
+                    <span class="sf-card__name">—</span><span class="sf-card__meta">booked · synced</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ PROBLEM STRIP ============ -->
+  <section class="section section--tight problem">
+    <div class="wrap">
+      <div class="problem-grid">
+        <div class="section-head" data-reveal>
+          <span class="kicker">01 / The problem</span>
+          <h2 class="h2">You're duct-taping a website to a CRM to a calendar — and doing the admin by hand.</h2>
+        </div>
+        <div class="problem-flow" data-reveal style="--d:.1s">
+          <div class="pf-item pf-bad"><span class="mono">WEBSITE</span></div>
+          <span class="pf-gap">×</span>
+          <div class="pf-item pf-bad"><span class="mono">CRM</span></div>
+          <span class="pf-gap">×</span>
+          <div class="pf-item pf-bad"><span class="mono">MANUAL ADMIN</span></div>
+          <span class="pf-arrow">→</span>
+          <div class="pf-item pf-good"><span class="mono">ONE SYSTEM</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ SERVICES ============ -->
+  <section class="section services">
+    <div class="wrap">
+      <div class="flex between center wrap-gap" style="margin-bottom: clamp(28px,4vw,52px)">
+        <div class="section-head" data-reveal>
+          <span class="kicker">02 / What I build</span>
+          <h2 class="h1">Four parts. One integrated build.</h2>
+          <p class="lead">Every part is tailored to your business and wired together into one system — site, CRM, and automation working as a whole, not stitched together from disconnected tools.</p>
+        </div>
+        <a class="link-arrow" href="services.html" data-reveal>Full service breakdown <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 8h10M9 4l4 4-4 4"/></svg></a>
+      </div>
+      <div class="grid cols-4">
+        <!-- card 1 -->
+        <a class="card card--accent" href="services.html" data-reveal>
+          <div class="flex between center"><span class="card-num">01</span><span class="svc-glyph">◧</span></div>
+          <h3 class="h3" style="margin-top:18px">Websites</h3>
+          <p class="text-muted" style="margin-top:10px; font-size:.96rem">Fast, sharp, conversion-built sites — customised to fit your business, not a generic off-the-shelf theme. The front door to your CRM.</p>
         </a>
-
-        <nav aria-label="Primary" class="nav-links">
-          <a href="./" class="nav-link is-current" aria-current="page">Home</a>
-          <a href="work.html" class="nav-link">Work</a>
-          <a href="process.html" class="nav-link">Process</a>
-          <a href="about.html" class="nav-link">About</a>
-          <a href="contact.html" class="nav-link">Contact</a>
-        </nav>
-
-        <div class="nav-actions">
-          <div class="lang-switcher" role="group" aria-label="Language">
-            <a href="./" hreflang="en" class="lang-link is-current">EN</a>
-            <a href="pt-PT/" hreflang="pt-PT" class="lang-link">PT</a>
-          </div>
-        </div>
+        <!-- card 2 -->
+        <a class="card card--accent" href="services.html" data-reveal style="--d:.06s">
+          <div class="flex between center"><span class="card-num">02</span><span class="svc-glyph">⊞</span></div>
+          <h3 class="h3" style="margin-top:18px">Integrated CRM</h3>
+          <p class="text-muted" style="margin-top:10px; font-size:.96rem">Your client database wired straight into your site. One source of truth for contacts, deals, and history.</p>
+        </a>
+        <!-- card 3 -->
+        <a class="card card--accent" href="services.html" data-reveal style="--d:.12s">
+          <div class="flex between center"><span class="card-num">03</span><span class="svc-glyph">◇</span></div>
+          <h3 class="h3" style="margin-top:18px">AI Automation &amp; Integrations</h3>
+          <p class="text-muted" style="margin-top:10px; font-size:.96rem">AI and API integrations that do real work — drafting follow-ups, routing leads, syncing your tools.</p>
+        </a>
+        <!-- card 4 -->
+        <a class="card card--accent" href="services.html" data-reveal style="--d:.18s">
+          <div class="flex between center"><span class="card-num">04</span><span class="svc-glyph">◈</span></div>
+          <h3 class="h3" style="margin-top:18px">Workflow &amp; Calendar Automation</h3>
+          <p class="text-muted" style="margin-top:10px; font-size:.96rem">Follow-ups, reminders, and booking handled automatically — so admin stops eating your week.</p>
+        </a>
       </div>
-    </header>
+    </div>
+  </section>
 
-    <main id="main" class="site-main">
-
-      <section class="section hero" id="hero">
-        <div class="container">
-          <div class="hero-stat-block" data-reveal>
-            <canvas class="hero-3d" id="hero-3d" aria-hidden="true"></canvas>
-            <p class="eyebrow">Issue No.01 / 2026</p>
-            <h1 class="hero-headline">Not an agency.<br /><em>A player.</em></h1>
-            <p class="hero-sub">Solo studio. I build for brands worth being a fan of.</p>
-            <div class="cta-row">
-              <a class="btn btn-primary" href="work.html">See the work</a>
-              <a class="btn btn-ghost" href="#closing">Talk</a>
-            </div>
-            <dl class="hero-stats" aria-label="At a glance">
-              <div class="hero-stat">
-                <dt class="hero-stat-label">Loc</dt>
-                <dd class="hero-stat-value">Alentejo, PT</dd>
-              </div>
-              <div class="hero-stat">
-                <dt class="hero-stat-label">Class</dt>
-                <dd class="hero-stat-value">Solo studio</dd>
-              </div>
-              <div class="hero-stat">
-                <dt class="hero-stat-label">Reply</dt>
-                <dd class="hero-stat-value">Under 24h</dd>
-              </div>
-              <div class="hero-stat">
-                <dt class="hero-stat-label">Status</dt>
-                <dd class="hero-stat-value"><span class="pulse" aria-hidden="true"></span>Open for builds</dd>
-              </div>
-            </dl>
-          </div>
+  <!-- ============ WHY ONE BUILDER ============ -->
+  <section class="section why">
+    <div class="wrap">
+      <div class="why-grid">
+        <div class="section-head" data-reveal style="position:sticky; top:100px;">
+          <span class="kicker">03 / Why one builder</span>
+          <h2 class="h1">The person who designs it is the person who wires it.</h2>
+          <p class="lead">Agencies split your project across designers, developers, and account managers — and the gaps between them become your problem. Here, there are no gaps, and nothing is off-the-shelf.</p>
+          <a class="btn btn--ghost" href="about.html" style="margin-top:10px">How I work</a>
         </div>
-      </section>
-
-      <section class="section about" id="about">
-        <div class="container">
-          <h2 data-reveal>Hi, I&#x27;m Diogo.</h2>
-
-          <div class="about-grid">
-            <figure class="about-portrait" data-reveal>
-              <img
-                src="assets/people/diogo.jpg"
-                alt="Diogo, Cardinal Studio's founder — frontal portrait, neutral background, white polo."
-                loading="lazy"
-              />
-              <span class="player-tag" aria-hidden="true">PLAYER.01</span>
-            </figure>
-
-            <div class="about-body" data-reveal data-reveal-delay="80">
-              <p>I work solo. Multi-discipline studio: web, design, game-dev, product.</p>
-              <p>I rebuild websites for brands I&#x27;m a fan of, because being a fan of what you build is half the work.</p>
-              <p>Jack of all trades by choice; specialist by experience. As long as I get the tech, I can do it.</p>
-
-              <blockquote class="about-pullquote">
-                I rebuild websites of brands I&#x27;m a fan of — because being a fan of what you build is half the work.
-              </blockquote>
-
-              <p class="eyebrow">Loadout</p>
-              <ul class="skills-row" role="list">
-                <li class="skill-chip">Web</li>
-                <li class="skill-chip">Design</li>
-                <li class="skill-chip">Game dev</li>
-                <li class="skill-chip">Product</li>
-                <li class="skill-chip">Brand</li>
-              </ul>
+        <div class="why-list">
+          <div class="why-item" data-reveal>
+            <span class="why-num mono">01</span>
+            <div>
+              <h3 class="h3">End-to-end, one head</h3>
+              <p class="text-muted">One technical person designs, builds, and connects the entire product. Requirements don't get lost in translation between teams.</p>
+            </div>
+          </div>
+          <div class="why-item" data-reveal style="--d:.06s">
+            <span class="why-num mono">02</span>
+            <div>
+              <h3 class="h3">Six years, four disciplines</h3>
+              <p class="text-muted">Game design, full-stack development, product, and PR. Your requirements get understood deeply — and turned into working systems, not brochure pages.</p>
+            </div>
+          </div>
+          <div class="why-item" data-reveal style="--d:.12s">
+            <span class="why-num mono">03</span>
+            <div>
+              <h3 class="h3">You talk to the builder</h3>
+              <p class="text-muted">No account manager, no unnecessary fees. Direct, close communication with the person actually doing the work.</p>
+            </div>
+          </div>
+          <div class="why-item" data-reveal style="--d:.18s">
+            <span class="why-num mono">04</span>
+            <div>
+              <h3 class="h3">Automation is core, not an add-on</h3>
+              <p class="text-muted">Calendars, follow-ups, and AI integrations are built into the system from day one — not bolted on after launch.</p>
             </div>
           </div>
         </div>
-      </section>
+      </div>
+    </div>
+  </section>
 
-      <section class="section signature" id="signature">
-        <div class="container">
-          <p class="eyebrow" data-reveal>Now playing</p>
-          <h2 data-reveal data-reveal-delay="40">Latest work</h2>
-          <p class="lead" data-reveal data-reveal-delay="80">A real one. More on the work page.</p>
-
-          <div class="portfolio-grid">
-            <a class="case-card" data-reveal data-reveal-delay="160" href="https://cpsplastering.cardinalstudio.dev/" target="_blank" rel="noopener">
-              <figure class="case-cover">
-                <img
-                  src="assets/portfolio/cps-plastering-cover.png"
-                  alt="Finished interior wall from the CPS Plastering case study — smooth skim ready for paint"
-                  loading="lazy"
-                />
-                <span class="case-tag">PROJECT.001</span>
-                <span class="case-stamp">Shipped</span>
-              </figure>
-              <div class="case-body">
-                <ul class="tech-tags" aria-label="Stack">
-                  <li class="tech-tag">Web</li>
-                  <li class="tech-tag">Brand</li>
-                  <li class="tech-tag">Quote form</li>
-                  <li class="tech-tag">Social proof</li>
-                </ul>
-                <h3>CPS Plastering &amp; Rendering</h3>
-                <p class="case-summary">Reimagined website for a Coventry plastering and rendering business. Drag-to-compare case studies, quote form, Google/Trustpilot social proof embedded.</p>
-                <span class="case-link">Visit site</span>
-              </div>
-            </a>
-          </div>
+  <!-- ============ CREDIBILITY / STATS ============ -->
+  <section class="section section--tight stats">
+    <div class="wrap">
+      <div class="stat-row">
+        <div class="stat" data-reveal>
+          <div class="num"><span data-count="6">6</span><span class="suffix">yrs</span></div>
+          <div class="lbl">Across game design, full-stack, product &amp; PR</div>
         </div>
-      </section>
-
-      <section class="section patch-notes" id="patch-notes">
-        <div class="container">
-          <p class="eyebrow" data-reveal>Patch notes</p>
-          <h2 data-reveal data-reveal-delay="40">What just shipped.</h2>
-          <p class="lead" data-reveal data-reveal-delay="80">Cardinal Studio is a working studio, not a static page. This is what changed recently.</p>
-
-          <ol class="patch-list" data-reveal data-reveal-delay="160">
-            <li class="patch-entry">
-              <p class="patch-meta"><span class="patch-version">v0.5.0</span><span class="patch-date">2026-05-09</span></p>
-              <p class="patch-title">Site rebuilt from scratch. FireRed palette, game-feel chrome.</p>
-              <p class="patch-desc">Stat-block hero, achievement cards, direct line. The site now matches the brand spec instead of drifting.</p>
-            </li>
-            <li class="patch-entry">
-              <p class="patch-meta"><span class="patch-version">v0.4.0</span><span class="patch-date">2026-05-06</span></p>
-              <p class="patch-title">First customer shipped — CPS Plastering &amp; Rendering, Coventry.</p>
-              <p class="patch-desc">Full rebuild with drag-to-compare case studies, quote form, Google/Trustpilot social proof.</p>
-            </li>
-            <li class="patch-entry">
-              <p class="patch-meta"><span class="patch-version">v0.3.0</span><span class="patch-date">2026-05-04</span></p>
-              <p class="patch-title">Bilingual EN + PT-PT pipeline lands.</p>
-              <p class="patch-desc">PT-PT primary at /pt-PT, EN at root, slot-key contract validated by three CI scripts.</p>
-            </li>
-            <li class="patch-entry">
-              <p class="patch-meta"><span class="patch-version">v0.0.0</span><span class="patch-date">2026-03-15</span></p>
-              <p class="patch-title">Studio reboot. Cardinal Studio v2 begins.</p>
-              <p class="patch-desc">Pivot from generic SMB sites to brands worth being a fan of.</p>
-            </li>
-          </ol>
+        <div class="stat" data-reveal style="--d:.1s">
+          <div class="num"><span data-count="1">1</span><span class="suffix">builder</span></div>
+          <div class="lbl">Designs, builds &amp; wires the whole stack</div>
         </div>
-      </section>
-
-      <section class="section room-talk" id="closing">
-        <div class="container">
-          <h2 data-reveal>Talk to me.</h2>
-          <p data-reveal data-reveal-delay="80">I read everything personally. No forms, no funnels.</p>
-
-          <ol class="how-it-works" data-reveal data-reveal-delay="120" aria-label="How it works">
-            <li class="how-step"><span class="how-step-num">Step 01</span><span class="how-step-label">Email me with what you need.</span></li>
-            <li class="how-step"><span class="how-step-num">Step 02</span><span class="how-step-label">30-min call. Free, no pitch deck.</span></li>
-            <li class="how-step"><span class="how-step-num">Step 03</span><span class="how-step-label">Fixed scope + timeline.</span></li>
-            <li class="how-step"><span class="how-step-num">Step 04</span><span class="how-step-label">Build, iterate, ship.</span></li>
-          </ol>
-
-          <div class="cta-row" data-reveal data-reveal-delay="160">
-            <a class="btn btn-primary" href="mailto:diogo@cardinalstudio.dev?subject=New%20quest%20%E2%80%94%20Cardinal%20Studio">Send an email</a>
-            <a class="btn btn-ghost" href="https://cal.com/diogo-dias-zg18dh/15min">Book 15 min</a>
-          </div>
-
-          <aside class="talk-direct-line" data-reveal data-reveal-delay="240">
-            <p class="talk-direct-label">Direct line</p>
-            <a class="talk-direct-email" href="mailto:diogo@cardinalstudio.dev?subject=New%20quest%20%E2%80%94%20Cardinal%20Studio">diogo@cardinalstudio.dev</a>
-            <p class="talk-direct-meta"><strong>Average reply:</strong> under 24h on weekdays. <strong>It&#x27;s me typing.</strong> No support queue, no template responses.</p>
-          </aside>
-        </div>
-      </section>
-
-    </main>
-
-    <footer class="site-footer" role="contentinfo">
-      <div class="container">
-        <div class="footer-grid">
-          <div class="footer-brand">
-            <p class="footer-logo">
-              <svg class="brand-mark brand-mark-footer" viewBox="0 0 32 32" aria-hidden="true" focusable="false">
-                <text x="16" y="24" text-anchor="middle" font-family="Bricolage Grotesque, sans-serif" font-size="28" font-weight="800" fill="#D62828" letter-spacing="-1">#</text>
-              </svg>
-              Cardinal Studio
-            </p>
-            <p class="footer-tagline">Built by hand. From Alentejo, Portugal.</p>
-          </div>
-
-          <nav class="footer-nav" aria-label="Footer">
-            <a href="./" class="footer-link">Home</a>
-            <a href="work.html" class="footer-link">Work</a>
-            <a href="process.html" class="footer-link">Process</a>
-            <a href="about.html" class="footer-link">About</a>
-            <a href="contact.html" class="footer-link">Contact</a>
-          </nav>
-
-          <div class="footer-direct">
-            <a class="footer-direct-link" href="mailto:diogo@cardinalstudio.dev?subject=New%20quest%20%E2%80%94%20Cardinal%20Studio">diogo@cardinalstudio.dev</a>
-            <a class="footer-direct-link" href="https://cal.com/diogo-dias-zg18dh/15min">cal.com/diogo-dias</a>
-          </div>
-
-          <div class="footer-legal">
-            <p class="footer-legal-line">No CMS. No agency. No ChatGPT-on-rails. Just me.</p>
-          </div>
-        </div>
-
-        <div class="footer-status">
-          <div class="footer-status-row">
-            <span class="footer-status-item"><span class="footer-status-dot" aria-hidden="true"></span><strong>Status:</strong> Online · accepting new builds</span>
-            <span class="footer-status-item"><strong>Last patch:</strong> 2026-05-09</span>
-            <span class="footer-status-item">© 2026 Cardinal Studio · Diogo (ENI), Portugal</span>
-          </div>
+        <div class="stat" data-reveal style="--d:.2s">
+          <div class="num"><span data-count="100">100</span><span class="suffix">% tailored</span></div>
+          <div class="lbl">Built on a proven foundation, customised to your business</div>
         </div>
       </div>
-    </footer>
+    </div>
+  </section>
 
-    <dialog class="cookie-banner" aria-labelledby="cookie-text" id="cookie-banner">
-      <div class="container cookie-row">
-        <p id="cookie-text" class="cookie-text">Essential cookies only. No tracking, no funnels.</p>
-        <div class="cookie-actions">
-          <button type="button" class="btn btn-ghost" data-cookie-action="reject">Essentials only</button>
-          <button type="button" class="btn btn-primary" data-cookie-action="accept">OK</button>
+  <!-- ============ FINAL CTA ============ -->
+  <section class="section">
+    <div class="wrap">
+      <div class="cta-band flex between center wrap-gap" data-reveal>
+        <div class="stack" style="gap:14px; max-width:34ch">
+          <span class="kicker">Start a build</span>
+          <h2 class="h1">Tell me what you're stitching together. I'll build the system that replaces it.</h2>
+        </div>
+        <div class="stack" style="gap:14px">
+          <a class="btn btn--primary btn--lg" data-wa="Message on WhatsApp" href="#"></a>
+          <a class="link-arrow" href="contact.html" style="justify-content:center">Other ways to reach me <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 8h10M9 4l4 4-4 4"/></svg></a>
         </div>
       </div>
-    </dialog>
+    </div>
+  </section>
 
-    <script>
-      // Site-wide enhancements: scroll progress, scroll-reveal.
-      // Graceful degradation — site renders fine without JS.
-      (() => {
-        const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+</main>
 
-        const bar = document.querySelector('.scroll-progress');
-        if (bar) {
-          let ticking = false;
-          const update = () => {
-            const doc = document.documentElement;
-            const max = Math.max(1, doc.scrollHeight - doc.clientHeight);
-            bar.style.transform = `scaleX(${Math.min(1, window.scrollY / max)})`;
-            ticking = false;
-          };
-          addEventListener('scroll', () => {
-            if (ticking) return;
-            ticking = true;
-            requestAnimationFrame(update);
-          }, { passive: true });
-          update();
-        }
+<div id="site-footer"><noscript>
+  <footer class="site-footer"><div class="wrap" style="padding:24px 0">
+    <nav aria-label="Footer" style="display:flex;gap:16px;flex-wrap:wrap"><a href="about.html">About</a><a href="services.html">Services</a><a href="blog.html">Blog</a><a href="contact.html">Contact</a><a href="mailto:hello@cardinal.studio">hello@cardinal.studio</a></nav>
+  </div></footer>
+</noscript></div>
 
-        const revealEls = document.querySelectorAll('[data-reveal]');
-        if (revealEls.length && 'IntersectionObserver' in window) {
-          const io = new IntersectionObserver((entries) => {
-            entries.forEach((e) => {
-              if (e.isIntersecting) {
-                const delay = parseInt(e.target.dataset.revealDelay || '0', 10);
-                setTimeout(() => e.target.classList.add('is-visible'), reduce ? 0 : delay);
-                io.unobserve(e.target);
-              }
-            });
-          }, { rootMargin: '0px 0px -8% 0px', threshold: 0.05 });
-          revealEls.forEach((el) => io.observe(el));
-        } else {
-          revealEls.forEach((el) => el.classList.add('is-visible'));
-        }
-      })();
-    </script>
+<script src="assets/site.js"></script>
+<script src="assets/hero-demo.js"></script>
 
-    <script>
-      // Cookie banner — essentials-only, soft show (no modal trap).
-      (() => {
-        const dlg = document.getElementById('cookie-banner');
-        if (!dlg) return;
-        if (document.cookie.includes('cs-consent=')) return;
-        if (typeof dlg.show === 'function') dlg.show();
-        else dlg.setAttribute('open', '');
-        dlg.addEventListener('click', (e) => {
-          const action = e.target?.dataset?.cookieAction;
-          if (!action) return;
-          const value = action === 'accept' ? 'all' : 'essential';
-          const oneYear = 60 * 60 * 24 * 365;
-          document.cookie = `cs-consent=${value};max-age=${oneYear};path=/;SameSite=Lax`;
-          dlg.close?.();
-          dlg.removeAttribute('open');
-        });
-      })();
-    </script>
+<style>
+/* ---- Home-specific layout ---- */
+.hero { padding-top: clamp(20px, 3.5vw, 48px); }
+.hero-grid { display: grid; grid-template-columns: 1.05fr 0.95fr; gap: clamp(32px, 5vw, 72px); align-items: center; }
+.hero-copy { display: grid; gap: 20px; }
+.hero-points { list-style: none; display: grid; gap: 11px; }
+.hero-points li { position: relative; padding-left: 28px; color: color-mix(in srgb, var(--bone) 82%, transparent); font-size: 1.02rem; line-height: 1.4; }
+.hero-points li::before {
+  content: ""; position: absolute; left: 0; top: .5em;
+  width: 14px; height: 8px; border-left: 2px solid var(--glow); border-bottom: 2px solid var(--glow);
+  transform: rotate(-45deg);
+}
+.hero-points strong { color: var(--bone); }
+.hero-meta { display: flex; align-items: center; gap: 18px; flex-wrap: wrap; margin-top: 10px; }
+.hero-visual { position: relative; }
+/* ---- Hero "one system" demo ---- */
+.sysflow {
+  background: var(--carbon-2); border: 1px solid var(--hair-2);
+  padding: clamp(16px, 2vw, 22px);
+  box-shadow: 0 40px 80px -50px rgba(0,0,0,.9);
+}
+.sysflow__head { display: flex; align-items: center; gap: 10px; margin-bottom: 16px; }
+.sysflow__tag {
+  font-family: var(--font-mono); font-size: .58rem; letter-spacing: .18em;
+  color: var(--cardinal); border: 1px solid color-mix(in srgb, var(--cardinal) 45%, transparent);
+  padding: 3px 7px;
+}
+.sysflow__title { font-family: var(--font-mono); font-size: .72rem; letter-spacing: .03em; color: var(--muted); }
+.sysflow__stage { position: relative; }
+.sysflow__wires { position: absolute; inset: 0; width: 100%; height: 100%; z-index: 1; pointer-events: none; overflow: visible; }
+.sf-wire { stroke: var(--hair-2); stroke-width: 2; fill: none; transition: stroke .3s var(--ease); }
+.sf-wire.is-lit { stroke: var(--signal); filter: drop-shadow(0 0 5px rgba(37,99,235,.6)); }
+.sysflow__packet {
+  position: absolute; top: 0; left: 0; width: 11px; height: 11px; border-radius: 50%;
+  background: var(--cardinal); box-shadow: 0 0 12px 2px rgba(226,54,54,.85);
+  z-index: 3; opacity: 0; will-change: transform; pointer-events: none;
+  transition: opacity .25s var(--ease);
+}
+.sysflow__packet.is-on { opacity: 1; }
+.sysflow__nodes { display: grid; gap: clamp(13px, 2.2vw, 20px); position: relative; z-index: 2; }
+.sf-node {
+  background: var(--carbon-3); border: 1px solid var(--hair); padding: 12px 14px; opacity: .5;
+  transition: border-color .35s var(--ease), box-shadow .35s var(--ease), opacity .35s var(--ease);
+}
+.sf-node.is-active { opacity: 1; border-color: color-mix(in srgb, var(--signal) 55%, var(--hair-2)); box-shadow: 0 0 0 1px color-mix(in srgb, var(--signal) 20%, transparent), 0 18px 40px -28px rgba(37,99,235,.5); }
+.sf-node[data-node="site"].is-active { border-color: color-mix(in srgb, var(--cardinal) 55%, var(--hair-2)); box-shadow: 0 0 0 1px color-mix(in srgb, var(--cardinal) 20%, transparent), 0 18px 40px -28px rgba(226,54,54,.45); }
+.sf-node__head { display: flex; align-items: center; gap: 8px; margin-bottom: 8px; }
+.sf-dot { width: 7px; height: 7px; border-radius: 50%; background: var(--glow); transition: background .3s, box-shadow .3s; }
+.sf-node.is-active .sf-dot { background: var(--signal); box-shadow: 0 0 8px rgba(37,99,235,.85); }
+.sf-node[data-node="site"].is-active .sf-dot { background: var(--cardinal); box-shadow: 0 0 8px rgba(226,54,54,.85); }
+.sf-label { font-family: var(--font-mono); font-size: .62rem; letter-spacing: .16em; color: var(--muted); }
+.sf-node.is-active .sf-label { color: var(--bone); }
+.sf-form { display: flex; gap: 8px; align-items: center; }
+.sf-input {
+  flex: 1; min-width: 0; background: var(--carbon); border: 1px solid var(--hair-2); color: var(--bone);
+  font-family: var(--font-mono); font-size: .74rem; letter-spacing: .01em; padding: 8px 10px; transition: border-color .2s;
+}
+.sf-input::placeholder { color: var(--faint); }
+.sf-input:focus { outline: none; border-color: var(--cardinal); }
+.sf-send { flex: none; width: 32px; height: 32px; display: grid; place-items: center; background: var(--cardinal); color: #fff; border: none; }
+.sf-send svg { width: 15px; height: 15px; }
+.sf-card { display: flex; flex-direction: column; gap: 1px; font-family: var(--font-mono); opacity: 0; transform: translateY(4px); transition: opacity .35s var(--ease), transform .35s var(--ease); }
+.sf-node.is-active .sf-card { opacity: 1; transform: none; }
+.sf-card__name { color: var(--bone); font-size: .74rem; letter-spacing: .01em; }
+.sf-card__meta { color: var(--faint); font-size: .64rem; letter-spacing: .03em; }
+@media (prefers-reduced-motion: reduce) {
+  .sysflow__packet { display: none; }
+  .sf-node, .sf-card { opacity: 1 !important; transform: none !important; transition: none; }
+}
 
-    <script>
-      // Cal.com embed — lazy-load on first interaction with a Cal link.
-      (function () {
-        const calLinks = document.querySelectorAll('a[href*="cal.com/diogo-dias-zg18dh"]');
-        if (!calLinks.length) return;
-        let loaded = false;
-        function loadCal() {
-          if (loaded) return;
-          loaded = true;
-          (function (C, A, L) { let p = function (a, ar) { a.q.push(ar); }; let d = C.document; C.Cal = C.Cal || function () { let cal = C.Cal; let ar = arguments; if (!cal.loaded) { cal.ns = {}; cal.q = cal.q || []; d.head.appendChild(d.createElement("script")).src = A; cal.loaded = true; } if (ar[0] === L) { const api = function () { p(api, arguments); }; const namespace = ar[1]; api.q = api.q || []; if(typeof namespace === "string"){cal.ns[namespace] = cal.ns[namespace] || api;p(cal.ns[namespace], ar);p(cal, ["initNamespace", namespace]);} else p(cal, ar); return;} p(cal, ar); }; })(window, "https://app.cal.com/embed/embed.js", "init");
-          Cal("init", "15min", { origin: "https://app.cal.com" });
-          Cal.ns["15min"]("ui", { hideEventTypeDetails: false, layout: "month_view" });
-          calLinks.forEach(function (el) {
-            el.setAttribute('data-cal-link', 'diogo-dias-zg18dh/15min');
-            el.setAttribute('data-cal-namespace', '15min');
-            el.setAttribute('data-cal-config', '{"layout":"month_view","useSlotsViewOnSmallScreen":"true"}');
-          });
-        }
-        calLinks.forEach((a) => {
-          a.addEventListener('mouseenter', loadCal, { once: true, passive: true });
-          a.addEventListener('focus', loadCal, { once: true, passive: true });
-          a.addEventListener('touchstart', loadCal, { once: true, passive: true });
-        });
-      })();
-    </script>
+.problem-grid { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(28px,4vw,56px); align-items: center; }
+.problem-flow { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; }
+.pf-item { padding: 14px 16px; border: 1px solid var(--hair-2); font-size: .72rem; letter-spacing: .1em; }
+.pf-bad { color: var(--muted); border-style: dashed; }
+.pf-good { color: var(--bone); border-color: var(--cardinal); background: rgba(226,54,54,.1); box-shadow: 0 0 18px -10px rgba(226,54,54,.4); }
+.pf-gap { color: var(--faint); font-family: var(--font-mono); }
+.pf-arrow { color: var(--glow); font-size: 1.2rem; margin-inline: 4px; }
 
-    <script type="module" src="hero-3d.js"></script>
+.svc-glyph { font-size: 1.3rem; color: var(--glow); opacity: .8; }
+.services .card { min-height: 210px; display: flex; flex-direction: column; }
+.services .card p { margin-top: auto; padding-top: 14px; }
 
-    <script>
-      // Mailto: copy address to clipboard on click + flash a [Copied] toast
-      // next to the clicked link. rauno.me micro-interaction reference.
-      (function () {
-        const COPIED_LABEL = 'Copied';
-        const toastFor = (el, label) => {
-          const toast = document.createElement('span');
-          toast.className = 'copy-toast';
-          toast.textContent = '[ ' + label + ' ]';
-          document.body.appendChild(toast);
-          const r = el.getBoundingClientRect();
-          toast.style.top = (r.top - 8) + 'px';
-          toast.style.left = (r.left + r.width / 2 - toast.offsetWidth / 2) + 'px';
-          requestAnimationFrame(() => toast.classList.add('is-visible'));
-          setTimeout(() => {
-            toast.classList.remove('is-visible');
-            setTimeout(() => toast.remove(), 220);
-          }, 1200);
-        };
-        document.querySelectorAll('a[href^="mailto:"]').forEach((a) => {
-          a.addEventListener('click', () => {
-            const email = a.getAttribute('href').replace(/^mailto:/, '').split('?')[0];
-            if (navigator.clipboard && email) {
-              navigator.clipboard.writeText(email).then(() => toastFor(a, COPIED_LABEL)).catch(() => {});
-            }
-          });
-        });
-      })();
-    </script>
-  </body>
+.why-grid { display: grid; grid-template-columns: 0.92fr 1.08fr; gap: clamp(32px,5vw,80px); }
+.why-list { display: grid; gap: 4px; }
+.why-item { display: grid; grid-template-columns: auto 1fr; gap: 22px; padding: 26px 0; border-top: 1px solid var(--hair); }
+.why-item:last-child { border-bottom: 1px solid var(--hair); }
+.why-num { color: var(--cardinal); font-size: .82rem; padding-top: 4px; }
+.why-item h3 { margin-bottom: 8px; }
+.why-item p { font-size: .98rem; }
+
+.proj { padding: 14px; display: block; }
+.proj-meta { padding: 16px 8px 6px; }
+
+@media (max-width: 920px){
+  .hero-grid { grid-template-columns: 1fr; }
+  .problem-grid { grid-template-columns: 1fr; }
+  .why-grid { grid-template-columns: 1fr; }
+  .why-grid .section-head { position: static !important; }
+}
+</style>
+</body>
 </html>

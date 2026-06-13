@@ -1,51 +1,31 @@
 # Cardinal Studio
 
-> Solo digital studio in Alentejo, Portugal. Diogo Dias rebuilds websites for brands worth being a fan of — gaming studios, IP with fanbase, small businesses run by people who are themselves fans of what they sell. Hand-built static sites with brand voice extraction and SEO + AI-search-optimisation foundation included as standard. Bilingual PT-PT / EN delivery.
+> Independent digital studio run by one technical founder (~6 years across game design, full-stack development, product, and PR). Builds a small business's entire digital layer end to end — website, integrated CRM, and AI/workflow automation — with no agency handoffs or integration gaps. Works remotely; founder based in Lisbon; English and Português.
 
 ## Services
+- [Websites](https://cardinal.studio/services.html): Fast, conversion-built sites coded from scratch, with every form and CTA writing straight into the CRM.
+- [Integrated CRM](https://cardinal.studio/services.html): A client database modelled around how the business works — contacts, deals, history, stages — living inside the same system as the site.
+- [AI Automation & Integrations](https://cardinal.studio/services.html): AI and API integrations that draft follow-ups, summarise enquiries, route leads, and sync the tools the business already runs.
+- [Workflow & Calendar Automation](https://cardinal.studio/services.html): Automated follow-ups, reminders, and booking, so a new lead is logged, acknowledged, and slotted toward the calendar without manual steps.
 
-- [Brand-led website](https://cardinalstudio.dev/work.html): hand-built static site. Custom design, brand voice extraction, copy in the founder's voice, SEO + AISEO pass (JSON-LD schema, sitemap, llms.txt, OG card, search-console verification, Google Business Profile setup) included as standard.
-- [Email + calendar agent](https://cardinalstudio.dev/): automated triage on the client's inbox, drafted replies in the client's voice, calendar booking integration via Cal.com or similar. Available on the Complete tier.
+## Why one builder
+- One technical person designs, builds, and wires the entire product — no agency handoffs, no integration gaps between vendors.
+- Six years across game design, full-stack development, product, and PR — requirements are turned into working systems, not brochure pages.
+- You talk to the builder directly — no account managers, no unnecessary fees.
+- Automation is treated as a core deliverable, not an add-on.
 
-## Coverage area
-
-Based in Alentejo, Portugal — works remotely, worldwide. Languages: PT-PT (primary), English, Spanish.
+## Coverage
+- Remote — worldwide. Founder based in Lisbon, Portugal.
+- Languages: English, Português.
 
 ## Contact
+- WhatsApp (fastest reply): https://cardinal.studio/contact.html
+- Email: hello@cardinal.studio
+- [Contact form](https://cardinal.studio/contact.html)
 
-- Email: diogo@cardinalstudio.dev (replies under 24h on weekdays)
-- Booking: https://cal.com/diogo-dias-zg18dh/15min (15-min intro call, free, no pitch deck)
-- No forms, no funnels — Diogo reads every email personally.
+## Writing
+- [Blog](https://cardinal.studio/blog.html): Plain notes on connecting websites, CRMs, and automation for small businesses.
+- [Why your website and your CRM should be the same thing](https://cardinal.studio/post.html)
 
-## How engagements work
-
-1. Email with what you need.
-2. 30-minute discovery call (free, no pitch deck).
-3. Fixed scope and timeline written up.
-4. Build, iterate, ship.
-
-## Recent work
-
-- [CPS Plastering & Rendering](https://cpsplastering.cardinalstudio.dev/): reimagined website for a Coventry plastering and rendering business. Drag-to-compare case studies, quote form, embedded Google + Trustpilot social proof.
-
-## About the studio
-
-- Founder: Diogo Dias, solo operator, ENI (Portuguese sole-proprietor status).
-- Multi-disciplinary: web development, design, game development, brand, product management.
-- Tagline: "Not an agency. A player." The studio works best for brands the operator is themselves a fan of.
-- Founded: 2026. Currently running an early-adopter cohort with discounted setup fees.
-
-## All pages
-
-- [Home](https://cardinalstudio.dev/) — landing, latest work, patch notes, talk
-- [Work](https://cardinalstudio.dev/work.html) — selected published cases
-- [Process](https://cardinalstudio.dev/process.html) — the four-step engagement: email intake → 30-min call → fixed scope → build
-- [About](https://cardinalstudio.dev/about.html) — why solo, why brand-led, where Cardinal Studio is NOT a fit
-- [Contact](https://cardinalstudio.dev/contact.html) — direct line + FAQ (response time, geography, languages, NDAs)
-
-## Localised version
-
-- English (default): https://cardinalstudio.dev/
-- Português (PT-PT): https://cardinalstudio.dev/pt-PT/
-
-Each page has a PT-PT mirror at /pt-PT/<page>.
+## About
+- [About the studio](https://cardinal.studio/about.html): One founder, the whole build — why solo and direct is the advantage.
