@@ -385,24 +385,6 @@ strong { color: var(--bone); font-weight: 600; }
   background: var(--cardinal);
 }
 .nav-tools { display: flex; align-items: center; gap: 12px; }
-.lang {
-  display: inline-flex;
-  align-items: stretch;
-  min-height: 44px;              /* min touch target */
-  font-family: var(--font-mono);
-  font-size: 0.74rem;
-  border: 1px solid var(--hair-2);
-  overflow: hidden;
-}
-.lang button {
-  background: transparent;
-  color: var(--muted);
-  border: none;
-  padding: 6px 12px;
-  letter-spacing: 0.08em;
-  transition: background 0.2s, color 0.2s;
-}
-.lang button.on { background: var(--bone); color: var(--carbon); }
 .nav-cta { display: inline-flex; }
 .nav-toggle {
   display: none;

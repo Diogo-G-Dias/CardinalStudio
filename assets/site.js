@@ -58,10 +58,6 @@
           '<nav class="nav-links" aria-label="Primary">' + links + '</nav>' +
           '<div class="nav-tools">' +
             THEME_BTN +
-            '<div class="lang" role="group" aria-label="Language">' +
-              '<button data-lang="EN" class="on">EN</button>' +
-              '<button data-lang="PT">PT</button>' +
-            '</div>' +
             '<a class="btn btn--primary btn--sm nav-cta desktop-cta" href="' + WA_LINK + '" target="_blank" rel="noopener">' + WA + 'WhatsApp</a>' +
             '<button class="nav-toggle" id="navToggle" aria-label="Menu" aria-expanded="false">' +
               '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M4 7h16M4 12h16M4 17h16"/></svg>' +
@@ -106,7 +102,6 @@
             '<span>© ' + year + ' Cardinal Studio — Built end to end by one person.</span>' +
             '<span style="display:flex;gap:18px;flex-wrap:wrap">' +
               '<a href="#">Privacy</a><a href="#">Cookies</a>' +
-              '<span>EN / PT</span>' +
             '</span>' +
           '</div>' +
         '</div>' +
@@ -120,6 +115,10 @@
   // ---------- Background canvas: drifting node/flow field ----------
   function initCanvas() {
     if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+    // Perf: the node field is decorative + pointer-driven. Skip it on small
+    // viewports and touch/coarse pointers, where the per-frame O(n²) link loop
+    // only burns battery and there's no cursor to interact with.
+    if (window.innerWidth < 760 || window.matchMedia('(pointer: coarse)').matches) return;
     var canvas = document.querySelector('canvas.bg-canvas');
     if (!canvas) return;
     var ctx = canvas.getContext('2d');
@@ -340,13 +339,6 @@
         });
       });
     }
-    // language switcher (visual state only — PT copy pending)
-    document.querySelectorAll('.lang button').forEach(function (b) {
-      b.addEventListener('click', function () {
-        document.querySelectorAll('.lang button').forEach(function (x) { x.classList.remove('on'); });
-        b.classList.add('on');
-      });
-    });
   }
 
   // ---------- expose small helpers ----------
