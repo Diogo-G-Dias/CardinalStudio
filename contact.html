@@ -178,6 +178,10 @@
           </label>
           <span class="field-err mono" id="cf-consent-err" hidden></span>
 
+          <!-- No-JS fallback: Formspree redirects a native POST here (JS submit is AJAX and ignores this). -->
+          <input type="hidden" name="_next" value="https://cardinalstudio.dev/thanks.html">
+          <!-- Honeypot: bots fill it, Formspree drops the submission. Hidden from people + assistive tech. -->
+          <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute;left:-9999px;width:1px;height:1px;opacity:0" hidden>
           <button class="btn btn--primary" type="submit" style="justify-content:center">Send message</button>
           <p class="form-status mono" id="formStatus" role="alert" aria-live="assertive"></p>
           <p class="form-gdpr mono">// GDPR: data is processed only to reply to you and is never sold or shared. The form is handled by Formspree; no tracking cookies are set.</p>
