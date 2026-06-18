@@ -1,6 +1,6 @@
 # Cardinal Studio
 
-> Independent digital studio run by one technical founder (~6 years across game design, full-stack development, product, and PR). Builds a small business's entire digital layer end to end — website, integrated CRM, and AI/workflow automation — with no agency handoffs or integration gaps. Works remotely; founder based in Lisbon; English and Português.
+> Independent digital studio run by one technical founder (~6 years across game design, full-stack development, product, and PR). Builds a small business's entire digital layer end to end — website, integrated CRM, and AI/workflow automation — with no agency handoffs or integration gaps. Works remotely; founder based in Ourique; English and Português.
 
 ## Services
 - [Websites](https://cardinalstudio.dev/services.html): Fast, conversion-built sites coded from scratch, with every form and CTA writing straight into the CRM.
@@ -15,16 +15,12 @@
 - Automation is treated as a core deliverable, not an add-on.
 
 ## Coverage
-- Remote — worldwide. Founder based in Lisbon, Portugal.
+- Remote — worldwide. Founder based in Ourique, Portugal.
 - Languages: English, Português.
 
 ## Contact
 - WhatsApp (fastest reply): https://wa.me/351911112884
 - [Contact form](https://cardinalstudio.dev/contact.html) — delivered straight to the founder's inbox
-
-## Writing
-- [Blog](https://cardinalstudio.dev/blog.html): Plain notes on connecting websites, CRMs, and automation for small businesses.
-- [Why your website and your CRM should be the same thing](https://cardinalstudio.dev/post.html)
 
 ## About
 - [About the studio](https://cardinalstudio.dev/about.html): One founder, the whole build — why solo and direct is the advantage.

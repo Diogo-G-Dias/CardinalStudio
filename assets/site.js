@@ -25,7 +25,6 @@
     ['Home', 'index.html'],
     ['About', 'about.html'],
     ['Services', 'services.html'],
-    ['Blog', 'blog.html'],
     ['Contact', 'contact.html']
   ];
 
@@ -89,7 +88,6 @@
               '<p class="footer-brandline">One technical partner who builds your entire digital layer — site, CRM, and automation — end to end.</p>' +
             '</div>' +
             col('Studio', [['About', 'about.html'], ['Services', 'services.html']]) +
-            col('More', [['Blog', 'blog.html']]) +
             '<div class="footer-col"><h2>Contact</h2>' +
               '<a href="' + WA_LINK + '" target="_blank" rel="noopener">WhatsApp ↗</a>' +
               '<a href="contact.html">Start a project</a>' +
