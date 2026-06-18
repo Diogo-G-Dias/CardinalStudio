@@ -6,6 +6,9 @@
 .env.local
 .env*.local
 
+# Formspree CLI config — holds the lead-recipient address; kept local, not in the public repo.
+formspree.json
+
 # misc
 .DS_Store
 Thumbs.db

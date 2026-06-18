@@ -1,2 +1,0 @@
-# Formspree CLI config — needed in-repo for `formspree deploy`, not served to the web.
-formspree.json
