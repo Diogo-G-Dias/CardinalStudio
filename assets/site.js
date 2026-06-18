@@ -19,9 +19,7 @@
       '<svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4.2"/><path d="M12 2v2.4M12 19.6V22M4.2 4.2l1.7 1.7M18.1 18.1l1.7 1.7M2 12h2.4M19.6 12H22M4.2 19.8l1.7-1.7M18.1 5.9l1.7-1.7"/></svg>' +
     '</button>';
 
-  var WA_LINK = 'https://wa.me/000000000000'; // PLACEHOLDER — replace with real WhatsApp number
-  var EMAIL = 'hello@cardinal.studio';        // PLACEHOLDER email
-  var PORTFOLIO = 'https://work.cardinal.studio'; // PLACEHOLDER portfolio subdomain
+  var WA_LINK = 'https://wa.me/351911112884';
 
   var NAV = [
     ['Home', 'index.html'],
@@ -91,17 +89,16 @@
               '<p class="footer-brandline">One technical partner who builds your entire digital layer — site, CRM, and automation — end to end.</p>' +
             '</div>' +
             col('Studio', [['About', 'about.html'], ['Services', 'services.html']]) +
-            col('More', [['Blog', 'blog.html'], ['Full portfolio ↗', PORTFOLIO, ' target="_blank" rel="noopener"']]) +
+            col('More', [['Blog', 'blog.html']]) +
             '<div class="footer-col"><h2>Contact</h2>' +
               '<a href="' + WA_LINK + '" target="_blank" rel="noopener">WhatsApp ↗</a>' +
-              '<a href="mailto:' + EMAIL + '">' + EMAIL + '</a>' +
               '<a href="contact.html">Start a project</a>' +
             '</div>' +
           '</div>' +
           '<div class="footer-bottom">' +
             '<span>© ' + year + ' Cardinal Studio — Built end to end by one person.</span>' +
             '<span style="display:flex;gap:18px;flex-wrap:wrap">' +
-              '<a href="#">Privacy</a><a href="#">Cookies</a>' +
+              '<a href="privacy.html">Privacy</a><a href="cookies.html">Cookies</a>' +
             '</span>' +
           '</div>' +
         '</div>' +
@@ -342,7 +339,7 @@
   }
 
   // ---------- expose small helpers ----------
-  window.CARDINAL = { WA_LINK: WA_LINK, EMAIL: EMAIL, PORTFOLIO: PORTFOLIO, ARR: ARR, WA: WA };
+  window.CARDINAL = { WA_LINK: WA_LINK, ARR: ARR, WA: WA };
 
   // ---------- Auto-wire declarative CTAs ----------
   function initCtas() {
@@ -353,8 +350,6 @@
       var label = el.getAttribute('data-wa') || 'Message on WhatsApp';
       el.innerHTML = WA + '<span>' + label + '</span>';
     });
-    document.querySelectorAll('[data-portfolio]').forEach(function (el) { el.setAttribute('href', PORTFOLIO); });
-    document.querySelectorAll('[data-email-link]').forEach(function (el) { el.setAttribute('href', 'mailto:' + EMAIL); if (!el.textContent.trim()) el.textContent = EMAIL; });
   }
 
   // ---------- Theme toggle ----------

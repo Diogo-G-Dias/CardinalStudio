@@ -1,0 +1,12 @@
+{
+  "forms": {
+    "contact": {
+      "name": "Cardinal Studio — Contact",
+      "fields": {
+        "name": { "type": "text", "required": true },
+        "email": { "type": "email", "required": true },
+        "message": { "type": "text", "required": true }
+      }
+    }
+  }
+}

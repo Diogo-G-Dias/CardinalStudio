@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<script>try{if(localStorage.getItem("cardinal-theme")==="light")document.documentElement.setAttribute("data-theme","light");}catch(e){}</script>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Cookies — Cardinal Studio</title>
+<meta name="description" content="This site uses no tracking or advertising cookies. Here's the short, honest version.">
+<link rel="canonical" href="https://cardinalstudio.dev/cookies.html">
+<meta property="og:site_name" content="Cardinal Studio">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://cardinalstudio.dev/cookies.html">
+<meta property="og:title" content="Cookies — Cardinal Studio">
+<meta property="og:description" content="This site uses no tracking or advertising cookies. Here's the short, honest version.">
+<meta property="og:image" content="https://cardinalstudio.dev/assets/og-default.png">
+<meta property="og:locale" content="en_GB">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="robots" content="index,follow">
+<link rel="icon" type="image/png" sizes="192x192" href="favicon-192.png">
+<link rel="icon" href="favicon.ico" sizes="any">
+<link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;600&display=swap">
+<link rel="stylesheet" href="assets/site.css">
+<noscript><style>[data-reveal]{opacity:1!important;transform:none!important}</style></noscript>
+</head>
+<body>
+<div class="bg-field"></div>
+<div class="bg-grid"></div>
+<canvas class="bg-canvas" aria-hidden="true"></canvas>
+
+<div id="site-header"><noscript>
+  <div class="wrap nav" style="padding:14px 0;display:flex;gap:20px;align-items:center;flex-wrap:wrap">
+    <a class="brand" href="index.html">Cardinal Studio</a>
+    <nav aria-label="Primary" style="display:flex;gap:16px;flex-wrap:wrap"><a href="index.html">Home</a><a href="about.html">About</a><a href="services.html">Services</a><a href="blog.html">Blog</a><a href="contact.html">Contact</a></nav>
+  </div>
+</noscript></div>
+
+<main>
+  <section class="section">
+    <div class="wrap">
+      <div class="legal" data-reveal>
+        <span class="kicker">Legal</span>
+        <h1 class="h-display">Cookies</h1>
+        <p class="lead">Short version: this site sets <strong>no tracking, analytics, or advertising cookies</strong>. There's nothing to consent to, which is why you won't see a cookie banner.</p>
+
+        <p class="legal-updated mono">Last updated: 18 June 2026</p>
+
+        <h2 class="h3">What the site stores on your device</h2>
+        <ul class="legal-list">
+          <li><strong>Theme preference</strong> — if you switch between dark and light, that single choice is saved in your browser's <em>local storage</em> (key <code>cardinal-theme</code>). It's not a cookie, it never leaves your device, and it isn't sent to me or anyone else. Clearing your site data removes it.</li>
+        </ul>
+
+        <h2 class="h3">Third parties that may set cookies</h2>
+        <ul class="legal-list">
+          <li><strong>Formspree</strong> — only when you submit the contact form. It may set technical cookies to protect against spam and abuse. Nothing is set just from viewing the page. See the <a href="https://formspree.io/legal/privacy-policy/" target="_blank" rel="noopener">Formspree policy</a>.</li>
+          <li><strong>Google Fonts</strong> — the site's fonts load from Google's servers. This doesn't set advertising cookies, but the request does expose your IP to Google. See <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google's policy</a>.</li>
+        </ul>
+
+        <h2 class="h3">No analytics</h2>
+        <p>There is currently no analytics, pixel, or behavioural tracking on this site. If that ever changes, this page and the <a href="privacy.html">privacy policy</a> will be updated first, and any cookies that actually require consent will be gated behind a proper opt-in.</p>
+
+        <h2 class="h3">Managing cookies</h2>
+        <p>You can clear or block cookies and local storage from your browser settings at any time. Doing so won't break the site — at most it forgets your dark/light preference.</p>
+
+        <p style="margin-top:28px"><a class="link-arrow" href="privacy.html">Read the privacy policy <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 8h10M9 4l4 4-4 4"/></svg></a></p>
+      </div>
+    </div>
+  </section>
+</main>
+
+<div id="site-footer"><noscript>
+  <footer class="site-footer"><div class="wrap" style="padding:24px 0">
+    <nav aria-label="Footer" style="display:flex;gap:16px;flex-wrap:wrap"><a href="about.html">About</a><a href="services.html">Services</a><a href="blog.html">Blog</a><a href="contact.html">Contact</a></nav>
+  </div></footer>
+</noscript></div>
+
+<script src="assets/site.js"></script>
+
+<style>
+.legal { max-width: 68ch; display: grid; gap: 4px; }
+.legal h2 { margin-top: 34px; margin-bottom: 6px; }
+.legal p { color: color-mix(in srgb, var(--bone) 82%, transparent); line-height: 1.65; margin-bottom: 4px; }
+.legal .lead { color: var(--bone); }
+.legal a { color: var(--glow); }
+.legal a:hover { color: var(--bone); }
+.legal code { font-family: var(--font-mono); font-size: .88em; color: var(--bone); background: var(--carbon-3); padding: 1px 5px; border: 1px solid var(--hair); }
+.legal-updated { color: var(--faint); font-size: .74rem; letter-spacing: .06em; margin: 6px 0 8px; }
+.legal-list { display: grid; gap: 12px; margin: 8px 0 4px; padding-left: 20px; color: color-mix(in srgb, var(--bone) 82%, transparent); line-height: 1.6; }
+.legal-list li { padding-left: 4px; }
+</style>
+</body>
+</html>
