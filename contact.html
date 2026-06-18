@@ -150,7 +150,7 @@
         </div>
 
         <!-- Backup: form -->
-        <form class="contact-form card" data-reveal style="--d:.1s" id="contactForm" action="https://formspree.io/p/3026714572863044877/f/contact" method="POST" novalidate>
+        <form class="contact-form card" data-reveal style="--d:.1s" id="contactForm" action="https://api.web3forms.com/submit" method="POST" novalidate>
           <div class="form-head">
             <span class="card-num">Backup channel</span>
             <h2 class="h3" style="margin-top:8px">Send a message</h2>
@@ -178,13 +178,17 @@
           </label>
           <span class="field-err mono" id="cf-consent-err" hidden></span>
 
-          <!-- No-JS fallback: Formspree redirects a native POST here (JS submit is AJAX and ignores this). -->
-          <input type="hidden" name="_next" value="https://cardinalstudio.dev/thanks.html">
-          <!-- Honeypot: bots fill it, Formspree drops the submission. Hidden from people + assistive tech. -->
-          <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute;left:-9999px;width:1px;height:1px;opacity:0" hidden>
+          <!-- Web3Forms config: access key (recipient is bound to it server-side, never shown), subject, sender label. -->
+          <input type="hidden" name="access_key" value="2c045d63-3458-4039-8f1e-560f2aebf93b">
+          <input type="hidden" name="subject" value="New enquiry — Cardinal Studio contact form">
+          <input type="hidden" name="from_name" value="Cardinal Studio website">
+          <!-- No-JS fallback: Web3Forms redirects a native POST here (JS submit is AJAX and ignores this). -->
+          <input type="hidden" name="redirect" value="https://cardinalstudio.dev/thanks.html">
+          <!-- Honeypot: Web3Forms drops submissions where this is filled. Hidden from people + assistive tech. -->
+          <input type="checkbox" name="botcheck" tabindex="-1" autocomplete="off" aria-hidden="true" style="display:none">
           <button class="btn btn--primary" type="submit" style="justify-content:center">Send message</button>
           <p class="form-status mono" id="formStatus" role="alert" aria-live="assertive"></p>
-          <p class="form-gdpr mono">// GDPR: data is processed only to reply to you and is never sold or shared. The form is handled by Formspree; no tracking cookies are set.</p>
+          <p class="form-gdpr mono">// GDPR: data is processed only to reply to you and is never sold or shared. The form is handled by Web3Forms; no tracking cookies are set.</p>
         </form>
 
       </div>
@@ -254,7 +258,7 @@
         firstInvalid.focus();       // move focus to the first problem (WCAG)
         return;
       }
-      // All valid → submit to Formspree via fetch (no page navigation).
+      // All valid → submit to Web3Forms via fetch (no page navigation).
       var btn = form.querySelector('button[type=submit]');
       status.textContent = '// Sending…';
       status.className = 'form-status mono';
@@ -263,18 +267,17 @@
         method: 'POST',
         body: new FormData(form),
         headers: { 'Accept': 'application/json' }
-      }).then(function (r) {
-        if (r.ok) {
-          status.textContent = '// Message sent — I\'ll reply, usually same day. For an instant reply, WhatsApp me.';
-          status.className = 'form-status mono ok';
-          fields.forEach(function (el) { setError(el, null); });
-          form.reset();
-        } else {
-          return r.json().then(function (d) {
-            throw new Error((d && d.errors && d.errors[0] && d.errors[0].message) || 'failed');
-          });
-        }
-      }).catch(function () {
+      }).then(function (r) { return r.json().catch(function () { return {}; }); })
+        .then(function (d) {
+          if (d.success) {
+            status.textContent = '// Message sent — I\'ll reply, usually same day. For an instant reply, WhatsApp me.';
+            status.className = 'form-status mono ok';
+            fields.forEach(function (el) { setError(el, null); });
+            form.reset();
+          } else {
+            throw new Error(d.message || 'failed');
+          }
+        }).catch(function () {
         status.textContent = '// Couldn\'t send just now — please WhatsApp me instead.';
         status.className = 'form-status mono err';
       }).finally(function () {
