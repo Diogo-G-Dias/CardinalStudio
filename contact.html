@@ -113,22 +113,16 @@
 
 <main>
 
-  <section class="section" style="padding-bottom: clamp(28px,3vw,40px)">
-    <div class="wrap">
-      <div class="stack-lg" style="max-width: 680px" data-reveal>
-        <span class="kicker">Contact</span>
-        <h1 class="h-display">Talk to the<br>person who <span class="text-red">builds</span> it.</h1>
-        <p class="lead">No forms-into-a-void, no account manager. The fastest way to reach me is WhatsApp — or send the form below and it lands straight in my inbox.</p>
-      </div>
-    </div>
-  </section>
-
-  <section class="section section--tight" style="padding-top:0">
+  <section class="section">
     <div class="wrap">
       <div class="contact-grid">
 
-        <!-- Primary: WhatsApp -->
+        <!-- Left: title + WhatsApp + contact methods -->
         <div class="contact-primary" data-reveal>
+          <div class="contact-head">
+            <span class="kicker">Contact</span>
+            <h1 class="h-display">Talk to the<br>person who <span class="text-red">builds</span> it.</h1>
+          </div>
           <a class="wa-hero" data-wa="Message on WhatsApp" href="#"></a>
           <p class="wa-sub mono">Typically replies same day</p>
 
@@ -291,6 +285,8 @@
 .contact-grid { display: grid; grid-template-columns: 0.95fr 1.05fr; gap: clamp(28px,4vw,64px); align-items: start; }
 
 .contact-primary { display: grid; gap: 18px; }
+.contact-head { display: grid; gap: 14px; margin-bottom: 4px; }
+.contact-head .h-display { font-size: clamp(2rem, 4.4vw, 3.1rem); }
 .wa-hero {
   display: flex; align-items: center; justify-content: center; gap: 12px;
   font-family: var(--font-head); font-weight: 600; font-size: 1.35rem;
