@@ -382,6 +382,17 @@
     if (main && !main.id) { main.id = 'main'; main.setAttribute('tabindex', '-1'); }
   }
 
+  // ---------- Vercel Web Analytics ----------
+  // Static-site loader: queue shim + the script Vercel serves at /_vercel/insights.
+  // Requires Web Analytics enabled for the project in the Vercel dashboard.
+  function initAnalytics() {
+    window.va = window.va || function () { (window.vai = window.vai || []).push(arguments); };
+    var s = document.createElement('script');
+    s.defer = true;
+    s.src = '/_vercel/insights/script.js';
+    document.head.appendChild(s);
+  }
+
   // ---------- boot ----------
   function boot() {
     buildHeader();
@@ -394,6 +405,7 @@
     initReveal();
     initCounters();
     initCardGlow();
+    initAnalytics();
   }
   if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', boot);
   else boot();
